@@ -6,6 +6,9 @@ app = Flask(__name__)
 
 API_KEY = '2c92f59a-bec1-11ed-a654-0242ac130002-2c92f644-bec1-11ed-a654-0242ac130002'
 
+# In-memory cache by lat/lng per day
+daily_cache_by_coords = {}
+
 def is_today(timestamp):
     today = datetime.now(timezone.utc).date()
     entry_date = datetime.fromisoformat(timestamp.replace("Z", "+00:00")).date()
@@ -30,6 +33,12 @@ def get_weather_info():
     lat, lng = get_coordinates(location)
     if lat is None or lng is None:
         return jsonify({'error': f'Could not resolve location: {location}'}), 400
+    today_str = datetime.now(timezone.utc).date().isoformat()
+    cache_key = f"{lat}_{lng}_{today_str}"
+
+    if cache_key in daily_cache_by_coords:
+        print(f"✅ Using cached data for {cache_key}")
+        return jsonify(daily_cache_by_coords[cache_key])
 
     headers = {'Authorization': API_KEY}
     results = {
@@ -48,7 +57,6 @@ def get_weather_info():
     tide_params = {'lat': lat, 'lng': lng, 'datum': 'MLLW'}
     tide_response = requests.get(tide_url, headers=headers, params=tide_params)
     tide_data = tide_response.json()
-
     for entry in tide_data.get('data', []):
         if is_today(entry['time']):
             tide_info = {'time': entry['time'], 'height': round(entry['height'], 2)}
@@ -67,7 +75,6 @@ def get_weather_info():
     }
     weather_response = requests.get(weather_url, headers=headers, params=weather_params)
     weather_data = weather_response.json()
-
     for entry in weather_data.get('hours', []):
         if is_today(entry['time']):
             wind_speed = entry.get('windSpeed', {}).get('noaa')
@@ -84,17 +91,16 @@ def get_weather_info():
     astro_params = {
         'lat': lat,
         'lng': lng,
-        'date': datetime.now(timezone.utc).date().isoformat()
+        'date': today_str
     }
     astro_response = requests.get(astro_url, headers=headers, params=astro_params)
     astro_data = astro_response.json()
-
     if 'data' in astro_data and len(astro_data['data']) > 0:
         astro = astro_data['data'][0]
         results['sunrise'] = astro.get('sunrise')
         results['sunset'] = astro.get('sunset')
 
-    # 🌊 Swell height (using same location)
+    # 🌊 Swell height
     swell_params = {
         'lat': lat,
         'lng': lng,
@@ -103,7 +109,6 @@ def get_weather_info():
     }
     swell_response = requests.get(weather_url, headers=headers, params=swell_params)
     swell_data = swell_response.json()
-
     for entry in swell_data.get('hours', []):
         if is_today(entry['time']):
             swell_height = entry.get('swellHeight', {}).get('sg')
@@ -113,6 +118,9 @@ def get_weather_info():
                     'height_m': round(swell_height, 2)
                 })
 
+    # ✅ Store in cache
+    daily_cache_by_coords[cache_key] = results
+    print(f"🌐 Cached new data for {cache_key}")
     return jsonify(results)
 
 if __name__ == '__main__':
