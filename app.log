@@ -1,0 +1,342 @@
+2025-10-29 09:39:23,225 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5050
+2025-10-29 09:39:23,226 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-29 09:39:23,227 [INFO]  * Restarting with stat
+2025-10-29 09:39:23,621 [WARNING]  * Debugger is active!
+2025-10-29 09:39:23,623 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 09:39:31,035 [INFO] Tide API status: 403
+2025-10-29 09:39:32,082 [INFO] Weather API status: 403
+2025-10-29 09:39:33,116 [INFO] Astronomy API status (2025-10-28): 403
+2025-10-29 09:39:34,136 [INFO] Swell API status: 403
+2025-10-29 09:39:34,141 [INFO] 127.0.0.1 - - [29/Oct/2025 09:39:34] "GET /weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand&days=0 HTTP/1.1" 200 -
+2025-10-29 09:42:30,180 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 09:42:30,213 [INFO]  * Restarting with stat
+2025-10-29 09:42:30,600 [WARNING]  * Debugger is active!
+2025-10-29 09:42:30,603 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 09:42:36,541 [INFO] Tide API status: 402
+2025-10-29 09:42:37,583 [INFO] Weather API status: 402
+2025-10-29 09:42:38,604 [INFO] Astronomy API status (2025-10-28): 402
+2025-10-29 09:42:39,633 [INFO] Swell API status: 402
+2025-10-29 09:42:39,640 [INFO] 127.0.0.1 - - [29/Oct/2025 09:42:39] "GET /weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand&days=0 HTTP/1.1" 200 -
+2025-10-29 09:45:01,532 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 09:45:01,563 [INFO]  * Restarting with stat
+2025-10-29 09:45:01,956 [WARNING]  * Debugger is active!
+2025-10-29 09:45:01,958 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 09:45:07,287 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5050
+2025-10-29 09:45:07,287 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-29 09:45:07,288 [INFO]  * Restarting with stat
+2025-10-29 09:45:07,703 [WARNING]  * Debugger is active!
+2025-10-29 09:45:07,705 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 09:45:13,940 [INFO] Tide API status: 402
+2025-10-29 09:45:13,941 [ERROR] Tide API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":25}}
+
+2025-10-29 09:45:14,974 [INFO] Weather API status: 402
+2025-10-29 09:45:14,974 [ERROR] Weather API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":26}}
+
+2025-10-29 09:45:16,040 [INFO] Astronomy API status (2025-10-28): 402
+2025-10-29 09:45:16,041 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":27}}
+
+2025-10-29 09:45:17,076 [INFO] Swell API status: 402
+2025-10-29 09:45:17,076 [ERROR] Swell API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":28}}
+
+2025-10-29 09:45:17,081 [INFO] 127.0.0.1 - - [29/Oct/2025 09:45:17] "GET /weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand&days=0 HTTP/1.1" 200 -
+2025-10-29 09:53:52,709 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 09:53:52,764 [INFO]  * Restarting with stat
+2025-10-29 09:53:53,197 [WARNING]  * Debugger is active!
+2025-10-29 09:53:53,199 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 09:54:10,568 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 09:54:10,607 [INFO]  * Restarting with stat
+2025-10-29 09:54:10,992 [WARNING]  * Debugger is active!
+2025-10-29 09:54:10,994 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 09:54:35,496 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 09:54:35,555 [INFO]  * Restarting with stat
+2025-10-29 09:54:36,029 [WARNING]  * Debugger is active!
+2025-10-29 09:54:36,031 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 09:54:55,470 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 09:54:55,508 [INFO]  * Restarting with stat
+2025-10-29 09:54:55,905 [WARNING]  * Debugger is active!
+2025-10-29 09:54:55,908 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 09:55:35,696 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 09:55:35,729 [INFO]  * Restarting with stat
+2025-10-29 09:55:36,119 [WARNING]  * Debugger is active!
+2025-10-29 09:55:36,120 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 09:56:12,553 [INFO] Incoming /weather-info request: location=Pauanui, Coromandel, New Zealand, days=1
+2025-10-29 09:56:14,006 [INFO] Calling Tide API: https://api.stormglass.io/v2/tide/extremes/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'datum': 'MLLW', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 09:56:15,174 [INFO] Tide API status: 402
+2025-10-29 09:56:15,175 [ERROR] Tide API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":29}}
+
+2025-10-29 09:56:15,175 [INFO] Calling Weather API: https://api.stormglass.io/v2/weather/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'params': 'windDirection,windSpeed', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 09:56:16,219 [INFO] Weather API status: 402
+2025-10-29 09:56:16,219 [ERROR] Weather API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":30}}
+
+2025-10-29 09:56:16,219 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'date': '2025-10-28'}
+2025-10-29 09:56:17,229 [INFO] Astronomy API status (2025-10-28): 402
+2025-10-29 09:56:17,229 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":31}}
+
+2025-10-29 09:56:17,230 [INFO] Calling Swell API: https://api.stormglass.io/v2/weather/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'params': 'swellHeight', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 09:56:18,277 [INFO] Swell API status: 402
+2025-10-29 09:56:18,277 [ERROR] Swell API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":32}}
+
+2025-10-29 09:56:18,284 [INFO] 127.0.0.1 - - [29/Oct/2025 09:56:18] "GET /weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand&days=0 HTTP/1.1" 200 -
+2025-10-29 10:00:04,353 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 10:00:04,401 [INFO]  * Restarting with stat
+2025-10-29 10:00:04,850 [WARNING]  * Debugger is active!
+2025-10-29 10:00:04,852 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 10:00:46,701 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 10:00:46,755 [INFO]  * Restarting with stat
+2025-10-29 10:00:47,176 [WARNING]  * Debugger is active!
+2025-10-29 10:00:47,178 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 10:01:16,761 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 10:01:16,794 [INFO]  * Restarting with stat
+2025-10-29 10:01:17,215 [WARNING]  * Debugger is active!
+2025-10-29 10:01:17,217 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 10:01:24,514 [INFO] Incoming /weather-info request: location=Pauanui, Coromandel, New Zealand, days=1
+2025-10-29 10:01:26,326 [INFO] Calling Tide API: https://api.stormglass.io/v2/tide/extremes/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'datum': 'MLLW', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:01:27,361 [INFO] Response time: 1.04s
+2025-10-29 10:01:27,361 [INFO] Tide API status: 402
+2025-10-29 10:01:27,361 [ERROR] Tide API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":33}}
+
+2025-10-29 10:01:27,361 [INFO] Calling Weather API: https://api.stormglass.io/v2/weather/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'params': 'windDirection,windSpeed', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:01:28,438 [INFO] Weather API status: 402
+2025-10-29 10:01:28,438 [ERROR] Weather API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":34}}
+
+2025-10-29 10:01:28,438 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'date': '2025-10-28'}
+2025-10-29 10:01:29,482 [INFO] Astronomy API status (2025-10-28): 402
+2025-10-29 10:01:29,482 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":35}}
+
+2025-10-29 10:01:29,482 [INFO] Calling Swell API: https://api.stormglass.io/v2/weather/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'params': 'swellHeight', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:01:30,508 [INFO] Swell API status: 402
+2025-10-29 10:01:30,508 [ERROR] Swell API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":36}}
+
+2025-10-29 10:01:30,511 [INFO] 127.0.0.1 - - [29/Oct/2025 10:01:30] "GET /weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand&days=0 HTTP/1.1" 200 -
+2025-10-29 10:03:34,847 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 10:03:34,892 [INFO]  * Restarting with stat
+2025-10-29 10:03:35,309 [WARNING]  * Debugger is active!
+2025-10-29 10:03:35,312 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 10:03:46,612 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 10:03:46,646 [INFO]  * Restarting with stat
+2025-10-29 10:03:47,067 [WARNING]  * Debugger is active!
+2025-10-29 10:03:47,070 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 10:04:28,885 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 10:04:28,918 [INFO]  * Restarting with stat
+2025-10-29 10:04:29,321 [WARNING]  * Debugger is active!
+2025-10-29 10:04:29,324 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 10:05:15,216 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 10:05:15,247 [INFO]  * Restarting with stat
+2025-10-29 10:05:15,688 [WARNING]  * Debugger is active!
+2025-10-29 10:05:15,690 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 10:05:24,946 [INFO] Incoming /weather-info request: location=Pauanui, Coromandel, New Zealand, days=1
+2025-10-29 10:05:25,983 [INFO] Calling Tide API: https://api.stormglass.io/v2/tide/extremes/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'datum': 'MLLW', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:05:27,005 [INFO] Response time: 1.02s
+2025-10-29 10:05:27,005 [INFO] Tide API status: 402
+2025-10-29 10:05:27,006 [ERROR] Tide API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":37}}
+
+2025-10-29 10:05:27,006 [INFO] Calling Weather API: https://api.stormglass.io/v2/weather/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'params': 'windDirection,windSpeed', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:05:28,036 [INFO] Response time: 1.03s
+2025-10-29 10:05:28,036 [INFO] Weather API status: 402
+2025-10-29 10:05:28,037 [ERROR] Weather API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":38}}
+
+2025-10-29 10:05:28,037 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'date': '2025-10-28'}
+2025-10-29 10:05:29,051 [INFO] Response time: 1.01s
+2025-10-29 10:05:29,051 [INFO] Astronomy API status (2025-10-28): 402
+2025-10-29 10:05:29,051 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":39}}
+
+2025-10-29 10:05:29,052 [INFO] Calling Swell API: https://api.stormglass.io/v2/weather/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'params': 'swellHeight', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:05:30,079 [INFO] Response time: 1.03s
+2025-10-29 10:05:30,079 [INFO] Swell API status: 402
+2025-10-29 10:05:30,079 [ERROR] Swell API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":40}}
+
+2025-10-29 10:05:30,084 [INFO] 127.0.0.1 - - [29/Oct/2025 10:05:30] "GET /weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand&days=0 HTTP/1.1" 200 -
+2025-10-29 10:06:10,885 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5050
+2025-10-29 10:06:10,885 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-29 10:06:10,886 [INFO]  * Restarting with stat
+2025-10-29 10:06:11,274 [WARNING]  * Debugger is active!
+2025-10-29 10:06:11,276 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 10:06:15,826 [INFO] Incoming /weather-info request: location=Pauanui, Coromandel, New Zealand, days=1
+2025-10-29 10:06:16,865 [INFO] Calling Tide API: https://api.stormglass.io/v2/tide/extremes/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'datum': 'MLLW', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:06:17,930 [INFO] Response time: 1.06s
+2025-10-29 10:06:17,930 [INFO] Tide API status: 402
+2025-10-29 10:06:17,930 [ERROR] Tide API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":41}}
+
+2025-10-29 10:06:17,931 [INFO] Calling Weather API: https://api.stormglass.io/v2/weather/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'params': 'windDirection,windSpeed', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:06:18,984 [INFO] Response time: 1.05s
+2025-10-29 10:06:18,984 [INFO] Weather API status: 402
+2025-10-29 10:06:18,984 [ERROR] Weather API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":42}}
+
+2025-10-29 10:06:18,985 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'date': '2025-10-28'}
+2025-10-29 10:06:20,004 [INFO] Response time: 1.02s
+2025-10-29 10:06:20,005 [INFO] Astronomy API status (2025-10-28): 402
+2025-10-29 10:06:20,005 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":43}}
+
+2025-10-29 10:06:20,005 [INFO] Calling Swell API: https://api.stormglass.io/v2/weather/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'params': 'swellHeight', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:06:21,083 [INFO] Response time: 1.08s
+2025-10-29 10:06:21,083 [INFO] Swell API status: 402
+2025-10-29 10:06:21,083 [ERROR] Swell API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":44}}
+
+2025-10-29 10:06:21,088 [INFO] 127.0.0.1 - - [29/Oct/2025 10:06:21] "GET /weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand&days=0 HTTP/1.1" 200 -
+2025-10-29 10:11:12,726 [INFO] Incoming /weather-info request: location=Brisbane, days=1
+2025-10-29 10:11:14,127 [INFO] Calling Tide API: https://api.stormglass.io/v2/tide/extremes/point with params: {'lat': -27.4689623, 'lng': 153.0235009, 'datum': 'MLLW', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:11:15,259 [INFO] Response time: 1.13s
+2025-10-29 10:11:15,259 [INFO] Tide API status: 402
+2025-10-29 10:11:15,260 [ERROR] Tide API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":45}}
+
+2025-10-29 10:11:15,260 [INFO] Calling Weather API: https://api.stormglass.io/v2/weather/point with params: {'lat': -27.4689623, 'lng': 153.0235009, 'params': 'windDirection,windSpeed', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:11:16,321 [INFO] Response time: 1.06s
+2025-10-29 10:11:16,321 [INFO] Weather API status: 402
+2025-10-29 10:11:16,321 [ERROR] Weather API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":46}}
+
+2025-10-29 10:11:16,321 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': -27.4689623, 'lng': 153.0235009, 'date': '2025-10-28'}
+2025-10-29 10:11:17,430 [INFO] Response time: 1.11s
+2025-10-29 10:11:17,431 [INFO] Astronomy API status (2025-10-28): 402
+2025-10-29 10:11:17,431 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":47}}
+
+2025-10-29 10:11:17,431 [INFO] Calling Swell API: https://api.stormglass.io/v2/weather/point with params: {'lat': -27.4689623, 'lng': 153.0235009, 'params': 'swellHeight', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:11:18,521 [INFO] Response time: 1.09s
+2025-10-29 10:11:18,521 [INFO] Swell API status: 402
+2025-10-29 10:11:18,521 [ERROR] Swell API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":48}}
+
+2025-10-29 10:11:18,526 [INFO] 127.0.0.1 - - [29/Oct/2025 10:11:18] "GET /weather-info?location=Brisbane HTTP/1.1" 200 -
+2025-10-29 10:11:56,677 [INFO] Incoming /weather-info request: location=Sabauia,Latina,italy, days=1
+2025-10-29 10:11:57,794 [INFO] 127.0.0.1 - - [29/Oct/2025 10:11:57] "[31m[1mGET /weather-info?location=Sabauia,Latina,italy HTTP/1.1[0m" 400 -
+2025-10-29 10:12:31,827 [INFO] Incoming /weather-info request: location=Sabaudia, days=1
+2025-10-29 10:12:32,897 [INFO] Calling Tide API: https://api.stormglass.io/v2/tide/extremes/point with params: {'lat': 41.3015672, 'lng': 13.0258726, 'datum': 'MLLW', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:12:34,000 [INFO] Response time: 1.10s
+2025-10-29 10:12:34,000 [INFO] Tide API status: 402
+2025-10-29 10:12:34,000 [ERROR] Tide API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":49}}
+
+2025-10-29 10:12:34,000 [INFO] Calling Weather API: https://api.stormglass.io/v2/weather/point with params: {'lat': 41.3015672, 'lng': 13.0258726, 'params': 'windDirection,windSpeed', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:12:35,141 [INFO] Response time: 1.14s
+2025-10-29 10:12:35,142 [INFO] Weather API status: 402
+2025-10-29 10:12:35,142 [ERROR] Weather API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":50}}
+
+2025-10-29 10:12:35,142 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': 41.3015672, 'lng': 13.0258726, 'date': '2025-10-28'}
+2025-10-29 10:12:36,215 [INFO] Response time: 1.07s
+2025-10-29 10:12:36,215 [INFO] Astronomy API status (2025-10-28): 402
+2025-10-29 10:12:36,216 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":51}}
+
+2025-10-29 10:12:36,216 [INFO] Calling Swell API: https://api.stormglass.io/v2/weather/point with params: {'lat': 41.3015672, 'lng': 13.0258726, 'params': 'swellHeight', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:12:37,335 [INFO] Response time: 1.12s
+2025-10-29 10:12:37,335 [INFO] Swell API status: 402
+2025-10-29 10:12:37,335 [ERROR] Swell API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":52}}
+
+2025-10-29 10:12:37,339 [INFO] 127.0.0.1 - - [29/Oct/2025 10:12:37] "GET /weather-info?location=Sabaudia&days=0 HTTP/1.1" 200 -
+2025-10-29 10:13:07,810 [INFO] Incoming /weather-info request: location=Ponza, days=1
+2025-10-29 10:13:08,914 [INFO] Calling Tide API: https://api.stormglass.io/v2/tide/extremes/point with params: {'lat': 40.8932368, 'lng': 12.9630622, 'datum': 'MLLW', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:13:10,010 [INFO] Response time: 1.10s
+2025-10-29 10:13:10,010 [INFO] Tide API status: 402
+2025-10-29 10:13:10,010 [ERROR] Tide API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":53}}
+
+2025-10-29 10:13:10,010 [INFO] Calling Weather API: https://api.stormglass.io/v2/weather/point with params: {'lat': 40.8932368, 'lng': 12.9630622, 'params': 'windDirection,windSpeed', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:13:11,125 [INFO] Response time: 1.11s
+2025-10-29 10:13:11,125 [INFO] Weather API status: 402
+2025-10-29 10:13:11,125 [ERROR] Weather API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":54}}
+
+2025-10-29 10:13:11,125 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': 40.8932368, 'lng': 12.9630622, 'date': '2025-10-28'}
+2025-10-29 10:13:12,229 [INFO] Response time: 1.10s
+2025-10-29 10:13:12,230 [INFO] Astronomy API status (2025-10-28): 402
+2025-10-29 10:13:12,230 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":55}}
+
+2025-10-29 10:13:12,230 [INFO] Calling Swell API: https://api.stormglass.io/v2/weather/point with params: {'lat': 40.8932368, 'lng': 12.9630622, 'params': 'swellHeight', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:13:13,375 [INFO] Response time: 1.14s
+2025-10-29 10:13:13,375 [INFO] Swell API status: 402
+2025-10-29 10:13:13,375 [ERROR] Swell API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":56}}
+
+2025-10-29 10:13:13,383 [INFO] 127.0.0.1 - - [29/Oct/2025 10:13:13] "GET /weather-info?location=Ponza&days=0 HTTP/1.1" 200 -
+2025-10-29 10:14:03,606 [INFO] Incoming /weather-info request: location=Channel Island, days=1
+2025-10-29 10:14:04,827 [INFO] Calling Tide API: https://api.stormglass.io/v2/tide/extremes/point with params: {'lat': -12.554576, 'lng': 130.8610919, 'datum': 'MLLW', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:14:05,926 [INFO] Response time: 1.10s
+2025-10-29 10:14:05,926 [INFO] Tide API status: 402
+2025-10-29 10:14:05,926 [ERROR] Tide API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":57}}
+
+2025-10-29 10:14:05,926 [INFO] Calling Weather API: https://api.stormglass.io/v2/weather/point with params: {'lat': -12.554576, 'lng': 130.8610919, 'params': 'windDirection,windSpeed', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:14:06,998 [INFO] Response time: 1.07s
+2025-10-29 10:14:06,998 [INFO] Weather API status: 402
+2025-10-29 10:14:06,998 [ERROR] Weather API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":58}}
+
+2025-10-29 10:14:06,998 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': -12.554576, 'lng': 130.8610919, 'date': '2025-10-28'}
+2025-10-29 10:14:08,074 [INFO] Response time: 1.08s
+2025-10-29 10:14:08,074 [INFO] Astronomy API status (2025-10-28): 402
+2025-10-29 10:14:08,074 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":59}}
+
+2025-10-29 10:14:08,074 [INFO] Calling Swell API: https://api.stormglass.io/v2/weather/point with params: {'lat': -12.554576, 'lng': 130.8610919, 'params': 'swellHeight', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:14:09,142 [INFO] Response time: 1.07s
+2025-10-29 10:14:09,142 [INFO] Swell API status: 402
+2025-10-29 10:14:09,142 [ERROR] Swell API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":60}}
+
+2025-10-29 10:14:09,159 [INFO] 127.0.0.1 - - [29/Oct/2025 10:14:09] "GET /weather-info?location=Channel%20Island&days=0 HTTP/1.1" 200 -
+2025-10-29 10:14:42,660 [INFO] Incoming /weather-info request: location=Channel Island,New Zealand, days=1
+2025-10-29 10:14:43,907 [INFO] Calling Tide API: https://api.stormglass.io/v2/tide/extremes/point with params: {'lat': -36.4219643, 'lng': 175.3312631, 'datum': 'MLLW', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:14:45,042 [INFO] Response time: 1.14s
+2025-10-29 10:14:45,042 [INFO] Tide API status: 402
+2025-10-29 10:14:45,042 [ERROR] Tide API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":61}}
+
+2025-10-29 10:14:45,042 [INFO] Calling Weather API: https://api.stormglass.io/v2/weather/point with params: {'lat': -36.4219643, 'lng': 175.3312631, 'params': 'windDirection,windSpeed', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:14:46,158 [INFO] Response time: 1.12s
+2025-10-29 10:14:46,158 [INFO] Weather API status: 402
+2025-10-29 10:14:46,158 [ERROR] Weather API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":62}}
+
+2025-10-29 10:14:46,158 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': -36.4219643, 'lng': 175.3312631, 'date': '2025-10-28'}
+2025-10-29 10:14:47,268 [INFO] Response time: 1.11s
+2025-10-29 10:14:47,268 [INFO] Astronomy API status (2025-10-28): 402
+2025-10-29 10:14:47,268 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":63}}
+
+2025-10-29 10:14:47,268 [INFO] Calling Swell API: https://api.stormglass.io/v2/weather/point with params: {'lat': -36.4219643, 'lng': 175.3312631, 'params': 'swellHeight', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 10:14:48,349 [INFO] Response time: 1.08s
+2025-10-29 10:14:48,349 [INFO] Swell API status: 402
+2025-10-29 10:14:48,349 [ERROR] Swell API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":64}}
+
+2025-10-29 10:14:48,358 [INFO] 127.0.0.1 - - [29/Oct/2025 10:14:48] "GET /weather-info?location=Channel%20Island,New%20Zealand&days=0 HTTP/1.1" 200 -
+2025-10-29 10:15:45,284 [INFO] Incoming /weather-info request: location=Channel Island,New Zealand, days=7
+2025-10-29 10:15:46,541 [INFO] Calling Tide API: https://api.stormglass.io/v2/tide/extremes/point with params: {'lat': -36.4219643, 'lng': 175.3312631, 'datum': 'MLLW', 'start': '2025-10-28', 'end': '2025-11-04'}
+2025-10-29 10:15:47,642 [INFO] Response time: 1.10s
+2025-10-29 10:15:47,642 [INFO] Tide API status: 402
+2025-10-29 10:15:47,642 [ERROR] Tide API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":65}}
+
+2025-10-29 10:15:47,642 [INFO] Calling Weather API: https://api.stormglass.io/v2/weather/point with params: {'lat': -36.4219643, 'lng': 175.3312631, 'params': 'windDirection,windSpeed', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-11-04'}
+2025-10-29 10:15:48,722 [INFO] Response time: 1.08s
+2025-10-29 10:15:48,723 [INFO] Weather API status: 402
+2025-10-29 10:15:48,723 [ERROR] Weather API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":66}}
+
+2025-10-29 10:15:48,723 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': -36.4219643, 'lng': 175.3312631, 'date': '2025-10-28'}
+2025-10-29 10:15:49,856 [INFO] Response time: 1.13s
+2025-10-29 10:15:49,856 [INFO] Astronomy API status (2025-10-28): 402
+2025-10-29 10:15:49,857 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":67}}
+
+2025-10-29 10:15:49,857 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': -36.4219643, 'lng': 175.3312631, 'date': '2025-10-29'}
+2025-10-29 10:15:50,942 [INFO] Response time: 1.08s
+2025-10-29 10:15:50,942 [INFO] Astronomy API status (2025-10-29): 402
+2025-10-29 10:15:50,942 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":68}}
+
+2025-10-29 10:15:50,942 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': -36.4219643, 'lng': 175.3312631, 'date': '2025-10-30'}
+2025-10-29 10:15:52,058 [INFO] Response time: 1.12s
+2025-10-29 10:15:52,058 [INFO] Astronomy API status (2025-10-30): 402
+2025-10-29 10:15:52,058 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":69}}
+
+2025-10-29 10:15:52,058 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': -36.4219643, 'lng': 175.3312631, 'date': '2025-10-31'}
+2025-10-29 10:15:53,258 [INFO] Response time: 1.20s
+2025-10-29 10:15:53,259 [INFO] Astronomy API status (2025-10-31): 402
+2025-10-29 10:15:53,259 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":70}}
+
+2025-10-29 10:15:53,259 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': -36.4219643, 'lng': 175.3312631, 'date': '2025-11-01'}
+2025-10-29 10:15:54,385 [INFO] Response time: 1.13s
+2025-10-29 10:15:54,386 [INFO] Astronomy API status (2025-11-01): 402
+2025-10-29 10:15:54,386 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":71}}
+
+2025-10-29 10:15:54,386 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': -36.4219643, 'lng': 175.3312631, 'date': '2025-11-02'}
+2025-10-29 10:15:55,491 [INFO] Response time: 1.11s
+2025-10-29 10:15:55,491 [INFO] Astronomy API status (2025-11-02): 402
+2025-10-29 10:15:55,491 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":72}}
+
+2025-10-29 10:15:55,492 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': -36.4219643, 'lng': 175.3312631, 'date': '2025-11-03'}
+2025-10-29 10:15:56,556 [INFO] Response time: 1.06s
+2025-10-29 10:15:56,556 [INFO] Astronomy API status (2025-11-03): 402
+2025-10-29 10:15:56,557 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":73}}
+
+2025-10-29 10:15:56,557 [INFO] Calling Swell API: https://api.stormglass.io/v2/weather/point with params: {'lat': -36.4219643, 'lng': 175.3312631, 'params': 'swellHeight', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-11-04'}
+2025-10-29 10:15:57,637 [INFO] Response time: 1.08s
+2025-10-29 10:15:57,637 [INFO] Swell API status: 402
+2025-10-29 10:15:57,637 [ERROR] Swell API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":74}}
+
+2025-10-29 10:15:57,642 [INFO] 127.0.0.1 - - [29/Oct/2025 10:15:57] "GET /weather-info?location=Channel%20Island,New%20Zealand&days=7 HTTP/1.1" 200 -
