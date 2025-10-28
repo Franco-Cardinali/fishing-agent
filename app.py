@@ -1,4 +1,5 @@
 import logging
+import time
 from flask import Flask, jsonify, request
 import requests
 from datetime import datetime, timedelta, timezone
@@ -49,6 +50,8 @@ def get_weather_info():
     days = request.args.get('days', default=1, type=int)
     days = max(1, min(days, 7))
 
+    logging.info(f"Incoming /weather-info request: location={location}, days={days}")
+
     lat, lng = get_coordinates(location)
     if lat is None or lng is None:
         return jsonify({'error': f'Could not resolve location: {location}'}), 400
@@ -69,7 +72,7 @@ def get_weather_info():
         'forecast': {}
     }
 
-    #Initialize forecast dictionary for each day
+    # Initialize forecast dictionary for each day
     for i in range(days):
         date = today + timedelta(days=i)
         date_str = date.isoformat()
@@ -87,7 +90,14 @@ def get_weather_info():
     # Tide extremes
     tide_url = 'https://api.stormglass.io/v2/tide/extremes/point'
     tide_params = {'lat': lat, 'lng': lng, 'datum': 'MLLW', 'start': start, 'end': end}
+
+    start_time = time.time()
+    logging.info(f"Calling Tide API: {tide_url} with params: {tide_params}")
+
     tide_response = requests.get(tide_url, headers=headers, params=tide_params)
+
+    duration = time.time() - start_time
+    logging.info(f"Response time: {duration:.2f}s")
     logging.info(f"Tide API status: {tide_response.status_code}")
 
     if tide_response.status_code != 200:
@@ -106,7 +116,7 @@ def get_weather_info():
         elif entry['type'] == 'low':
             results['forecast'][date_str]['low_tide'].append(tide_info)
 
-    #Wind data
+    # Wind data
     weather_url = 'https://api.stormglass.io/v2/weather/point'
     weather_params = {
         'lat': lat,
@@ -116,7 +126,13 @@ def get_weather_info():
         'start': start,
         'end': end
     }
+    logging.info(f"Calling Weather API: {weather_url} with params: {weather_params}")
+
+    start_time = time.time()
     weather_response = requests.get(weather_url, headers=headers, params=weather_params)
+
+    duration = time.time() - start_time
+    logging.info(f"Response time: {duration:.2f}s")
 
     logging.info(f"Weather API status: {weather_response.status_code}")
     if weather_response.status_code != 200:
@@ -135,13 +151,19 @@ def get_weather_info():
                 'direction_deg': wind_dir
             })
 
-    #Astronomy: sunrise, sunset, moonrise, moonset, moon phase
+    # Astronomy: sunrise, sunset, moonrise, moonset, moon phase
     for i in range(days):
         date = today + timedelta(days=i)
         date_str = date.isoformat()
         astro_url = 'https://api.stormglass.io/v2/astronomy/point'
         astro_params = {'lat': lat, 'lng': lng, 'date': date_str}
+        logging.info(f"Calling Astronomy API: {astro_url} with params: {astro_params}")
+        start_time = time.time()
+
         astro_response = requests.get(astro_url, headers=headers, params=astro_params)
+
+        duration = time.time() - start_time
+        logging.info(f"Response time: {duration:.2f}s")
 
         logging.info(f"Astronomy API status ({date_str}): {astro_response.status_code}")
         if astro_response.status_code != 200:
@@ -161,7 +183,7 @@ def get_weather_info():
             if astro.get('moonPhase'):
                 results['forecast'][date_str]['moon_phase'] = astro.get('moonPhase')
 
-    #Swell height
+    # 🌊 Swell height
     swell_params = {
         'lat': lat,
         'lng': lng,
@@ -170,7 +192,14 @@ def get_weather_info():
         'start': start,
         'end': end
     }
+    logging.info(f"Calling Swell API: {weather_url} with params: {swell_params}")
+
+    start_time = time.time()
+
     swell_response = requests.get(weather_url, headers=headers, params=swell_params)
+
+    duration = time.time() - start_time
+    logging.info(f"Response time: {duration:.2f}s")
 
     logging.info(f"Swell API status: {swell_response.status_code}")
     if swell_response.status_code != 200:
