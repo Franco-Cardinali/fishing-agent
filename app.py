@@ -1,5 +1,6 @@
 import logging
 import time
+from datetime import datetime, timedelta, timezone, time as dt_time
 from flask import Flask, jsonify, request
 import requests
 from datetime import datetime, timedelta, timezone
@@ -25,6 +26,7 @@ API_KEY = '2c92f59a-bec1-11ed-a654-0242ac130002-2c92f644-bec1-11ed-a654-0242ac13
 # In-memory cache by lat/lng per day range
 daily_cache_by_coords = {}
 
+
 def convert_to_local_time(utc_time_str, lat, lng):
     tf = TimezoneFinder()
     tz_name = tf.timezone_at(lat=lat, lng=lng)
@@ -35,14 +37,17 @@ def convert_to_local_time(utc_time_str, lat, lng):
     local_dt = utc_dt.astimezone(local_tz)
     return local_dt
 
+
 def get_coordinates(location_name):
     url = "https://nominatim.openstreetmap.org/search"
     params = {'q': location_name, 'format': 'json', 'limit': 1}
-    response = requests.get(url, params=params, headers={'User-Agent': 'weather-agent'})
+    response = requests.get(url, params=params, headers={
+                            'User-Agent': 'weather-agent'})
     data = response.json()
     if data:
         return float(data[0]['lat']), float(data[0]['lon'])
     return None, None
+
 
 @app.route('/weather-info', methods=['GET'])
 def get_weather_info():
@@ -50,15 +55,20 @@ def get_weather_info():
     days = request.args.get('days', default=1, type=int)
     days = max(1, min(days, 7))
 
-    logging.info(f"Incoming /weather-info request: location={location}, days={days}")
+    logging.info(
+        f"Incoming /weather-info request: location={location}, days={days}")
 
     lat, lng = get_coordinates(location)
     if lat is None or lng is None:
         return jsonify({'error': f'Could not resolve location: {location}'}), 400
     today = datetime.now(timezone.utc).date()
-    start = today.isoformat()
-    end_date = today + timedelta(days=days)
-    end = end_date.isoformat()
+
+
+    start_dt = datetime.combine(today, dt_time.min, tzinfo=timezone.utc)
+    end_dt = datetime.combine(today + timedelta(days=days - 1),
+                          dt_time.max, tzinfo=timezone.utc)
+    start = start_dt.isoformat()
+    end = end_dt.isoformat()
     cache_key = f"{lat}_{lng}_{start}_{end}"
 
     if cache_key in daily_cache_by_coords:
@@ -89,7 +99,8 @@ def get_weather_info():
 
     # Tide extremes
     tide_url = 'https://api.stormglass.io/v2/tide/extremes/point'
-    tide_params = {'lat': lat, 'lng': lng, 'datum': 'MLLW', 'start': start, 'end': end}
+    tide_params = {'lat': lat, 'lng': lng,
+                   'datum': 'MLLW', 'start': start, 'end': end}
 
     start_time = time.time()
     logging.info(f"Calling Tide API: {tide_url} with params: {tide_params}")
@@ -173,15 +184,20 @@ def get_weather_info():
         if 'data' in astro_data and len(astro_data['data']) > 0:
             astro = astro_data['data'][0]
             if astro.get('sunrise'):
-                results['forecast'][date_str]['sunrise'] = convert_to_local_time(astro.get('sunrise'), lat, lng).strftime('%Y-%m-%d %H:%M %Z')
+                results['forecast'][date_str]['sunrise'] = convert_to_local_time(
+                    astro.get('sunrise'), lat, lng).strftime('%Y-%m-%d %H:%M %Z')
             if astro.get('sunset'):
-                results['forecast'][date_str]['sunset'] = convert_to_local_time(astro.get('sunset'), lat, lng).strftime('%Y-%m-%d %H:%M %Z')
+                results['forecast'][date_str]['sunset'] = convert_to_local_time(
+                    astro.get('sunset'), lat, lng).strftime('%Y-%m-%d %H:%M %Z')
             if astro.get('moonrise'):
-                results['forecast'][date_str]['moon']['rise'] = convert_to_local_time(astro.get('moonrise'), lat, lng).strftime('%Y-%m-%d %H:%M %Z')
+                results['forecast'][date_str]['moon']['rise'] = convert_to_local_time(
+                    astro.get('moonrise'), lat, lng).strftime('%Y-%m-%d %H:%M %Z')
             if astro.get('moonset'):
-                results['forecast'][date_str]['moon']['set'] = convert_to_local_time(astro.get('moonset'), lat, lng).strftime('%Y-%m-%d %H:%M %Z')
+                results['forecast'][date_str]['moon']['set'] = convert_to_local_time(
+                    astro.get('moonset'), lat, lng).strftime('%Y-%m-%d %H:%M %Z')
             if astro.get('moonPhase'):
-                results['forecast'][date_str]['moon_phase'] = astro.get('moonPhase')
+                results['forecast'][date_str]['moon_phase'] = astro.get(
+                    'moonPhase')
 
     # 🌊 Swell height
     swell_params = {
@@ -196,7 +212,8 @@ def get_weather_info():
 
     start_time = time.time()
 
-    swell_response = requests.get(weather_url, headers=headers, params=swell_params)
+    swell_response = requests.get(
+        weather_url, headers=headers, params=swell_params)
 
     duration = time.time() - start_time
     logging.info(f"Response time: {duration:.2f}s")
@@ -222,13 +239,6 @@ def get_weather_info():
 
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=5050)
-import logging
-import time
-from flask import Flask, jsonify, request
-import requests
-from datetime import datetime, timedelta, timezone
-from timezonefinder import TimezoneFinder
-import pytz
 
 
 # Setup logging
@@ -249,6 +259,7 @@ API_KEY = '2c92f59a-bec1-11ed-a654-0242ac130002-2c92f644-bec1-11ed-a654-0242ac13
 # In-memory cache by lat/lng per day range
 daily_cache_by_coords = {}
 
+
 def convert_to_local_time(utc_time_str, lat, lng):
     tf = TimezoneFinder()
     tz_name = tf.timezone_at(lat=lat, lng=lng)
@@ -259,14 +270,17 @@ def convert_to_local_time(utc_time_str, lat, lng):
     local_dt = utc_dt.astimezone(local_tz)
     return local_dt
 
+
 def get_coordinates(location_name):
     url = "https://nominatim.openstreetmap.org/search"
     params = {'q': location_name, 'format': 'json', 'limit': 1}
-    response = requests.get(url, params=params, headers={'User-Agent': 'weather-agent'})
+    response = requests.get(url, params=params, headers={
+                            'User-Agent': 'weather-agent'})
     data = response.json()
     if data:
         return float(data[0]['lat']), float(data[0]['lon'])
     return None, None
+
 
 @app.route('/weather-info', methods=['GET'])
 def get_weather_info():
@@ -274,15 +288,20 @@ def get_weather_info():
     days = request.args.get('days', default=1, type=int)
     days = max(1, min(days, 7))
 
-    logging.info(f"Incoming /weather-info request: location={location}, days={days}")
+    logging.info(
+        f"Incoming /weather-info request: location={location}, days={days}")
 
     lat, lng = get_coordinates(location)
     if lat is None or lng is None:
         return jsonify({'error': f'Could not resolve location: {location}'}), 400
     today = datetime.now(timezone.utc).date()
-    start = today.isoformat()
-    end_date = today + timedelta(days=days)
-    end = end_date.isoformat()
+
+
+    start_dt = datetime.combine(today, dt_time.min, tzinfo=timezone.utc)
+    end_dt = datetime.combine(today + timedelta(days=days - 1),
+                          dt_time.max, tzinfo=timezone.utc)
+    start = start_dt.isoformat()
+    end = end_dt.isoformat()
     cache_key = f"{lat}_{lng}_{start}_{end}"
 
     if cache_key in daily_cache_by_coords:
@@ -290,8 +309,7 @@ def get_weather_info():
         return jsonify(daily_cache_by_coords[cache_key])
 
     headers = {'Authorization': API_KEY}
-    results = {
-        'coordinates': {'lat': lat, 'lng': lng},
+    results = {'coordinates': {'lat': lat, 'lng': lng},
         'location': location,
         'forecast': {}
     }
@@ -311,9 +329,9 @@ def get_weather_info():
             'wind': []
         }
 
-    # Tide extremes
-    tide_url = 'https://api.stormglass.io/v2/tide/extremes/point'
-    tide_params = {'lat': lat, 'lng': lng, 'datum': 'MLLW', 'start': start, 'end': end}
+        # Tide extremes
+        tide_url = 'https://api.stormglass.io/v2/tide/extremes/point'
+        tide_params = {'lat': lat, 'lng': lng,'datum': 'MLLW', 'start': start, 'end': end}
 
     start_time = time.time()
     logging.info(f"Calling Tide API: {tide_url} with params: {tide_params}")
@@ -384,7 +402,8 @@ def get_weather_info():
         logging.info(f"Calling Astronomy API: {astro_url} with params: {astro_params}")
         start_time = time.time()
 
-        astro_response = requests.get(astro_url, headers=headers, params=astro_params)
+        astro_response = requests.get(
+            astro_url, headers=headers, params=astro_params)
 
         duration = time.time() - start_time
         logging.info(f"Response time: {duration:.2f}s")
@@ -397,15 +416,20 @@ def get_weather_info():
         if 'data' in astro_data and len(astro_data['data']) > 0:
             astro = astro_data['data'][0]
             if astro.get('sunrise'):
-                results['forecast'][date_str]['sunrise'] = convert_to_local_time(astro.get('sunrise'), lat, lng).strftime('%Y-%m-%d %H:%M %Z')
+                results['forecast'][date_str]['sunrise'] = convert_to_local_time(
+                    astro.get('sunrise'), lat, lng).strftime('%Y-%m-%d %H:%M %Z')
             if astro.get('sunset'):
-                results['forecast'][date_str]['sunset'] = convert_to_local_time(astro.get('sunset'), lat, lng).strftime('%Y-%m-%d %H:%M %Z')
+                results['forecast'][date_str]['sunset'] = convert_to_local_time(
+                    astro.get('sunset'), lat, lng).strftime('%Y-%m-%d %H:%M %Z')
             if astro.get('moonrise'):
-                results['forecast'][date_str]['moon']['rise'] = convert_to_local_time(astro.get('moonrise'), lat, lng).strftime('%Y-%m-%d %H:%M %Z')
+                results['forecast'][date_str]['moon']['rise'] = convert_to_local_time(
+                    astro.get('moonrise'), lat, lng).strftime('%Y-%m-%d %H:%M %Z')
             if astro.get('moonset'):
-                results['forecast'][date_str]['moon']['set'] = convert_to_local_time(astro.get('moonset'), lat, lng).strftime('%Y-%m-%d %H:%M %Z')
+                results['forecast'][date_str]['moon']['set'] = convert_to_local_time(
+                    astro.get('moonset'), lat, lng).strftime('%Y-%m-%d %H:%M %Z')
             if astro.get('moonPhase'):
-                results['forecast'][date_str]['moon_phase'] = astro.get('moonPhase')
+                results['forecast'][date_str]['moon_phase'] = astro.get(
+                    'moonPhase')
 
     # 🌊 Swell height
     swell_params = {
@@ -416,11 +440,12 @@ def get_weather_info():
         'start': start,
         'end': end
     }
-    logging.info(f"Calling Swell API: {weather_url} with params: {swell_params}")
+    logging.info(f"Calling Swell API: { weather_url} with params: {swell_params}")
 
     start_time = time.time()
 
-    swell_response = requests.get(weather_url, headers=headers, params=swell_params)
+    swell_response = requests.get(
+        weather_url, headers=headers, params=swell_params)
 
     duration = time.time() - start_time
     logging.info(f"Response time: {duration:.2f}s")

@@ -340,3 +340,186 @@
 2025-10-29 10:15:57,637 [ERROR] Swell API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":74}}
 
 2025-10-29 10:15:57,642 [INFO] 127.0.0.1 - - [29/Oct/2025 10:15:57] "GET /weather-info?location=Channel%20Island,New%20Zealand&days=7 HTTP/1.1" 200 -
+2025-10-29 12:58:47,068 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5050
+2025-10-29 12:58:47,068 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-29 12:58:47,070 [INFO]  * Restarting with stat
+2025-10-29 12:58:47,475 [WARNING]  * Debugger is active!
+2025-10-29 12:58:47,477 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 12:58:57,142 [INFO] Incoming /weather-info request: location=Pauanui, Coromandel, New Zealand, days=1
+2025-10-29 12:58:58,286 [INFO] 127.0.0.1 - - [29/Oct/2025 12:58:58] "[35m[1mGET /weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand&days=0 HTTP/1.1[0m" 500 -
+2025-10-29 12:58:58,376 [INFO] 127.0.0.1 - - [29/Oct/2025 12:58:58] "GET /weather-info?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-10-29 12:58:58,377 [INFO] 127.0.0.1 - - [29/Oct/2025 12:58:58] "GET /weather-info?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-10-29 12:58:58,414 [INFO] 127.0.0.1 - - [29/Oct/2025 12:58:58] "GET /weather-info?__debugger__=yes&cmd=resource&f=console.png&s=rg17qmsk875RxeWXkI9o HTTP/1.1" 200 -
+2025-10-29 12:58:58,447 [INFO] 127.0.0.1 - - [29/Oct/2025 12:58:58] "GET /weather-info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-10-29 12:59:23,196 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 12:59:23,227 [INFO]  * Restarting with stat
+2025-10-29 12:59:23,608 [WARNING]  * Debugger is active!
+2025-10-29 12:59:23,610 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 12:59:28,419 [INFO] Incoming /weather-info request: location=Pauanui, Coromandel, New Zealand, days=1
+2025-10-29 12:59:29,448 [INFO] Calling Tide API: https://api.stormglass.io/v2/tide/extremes/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'datum': 'MLLW', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 12:59:30,523 [INFO] Response time: 1.07s
+2025-10-29 12:59:30,523 [INFO] Tide API status: 402
+2025-10-29 12:59:30,523 [ERROR] Tide API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":117}}
+
+2025-10-29 12:59:30,523 [INFO] Calling Weather API: https://api.stormglass.io/v2/weather/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'params': 'windDirection,windSpeed', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 12:59:31,548 [INFO] Response time: 1.03s
+2025-10-29 12:59:31,548 [INFO] Weather API status: 402
+2025-10-29 12:59:31,548 [ERROR] Weather API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":118}}
+
+2025-10-29 12:59:31,548 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'date': '2025-10-28'}
+2025-10-29 12:59:32,568 [INFO] Response time: 1.02s
+2025-10-29 12:59:32,568 [INFO] Astronomy API status (2025-10-28): 402
+2025-10-29 12:59:32,568 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":119}}
+
+2025-10-29 12:59:32,568 [INFO] Calling Swell API: https://api.stormglass.io/v2/weather/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'params': 'swellHeight', 'source': 'noaa', 'start': '2025-10-28', 'end': '2025-10-29'}
+2025-10-29 12:59:33,599 [INFO] Response time: 1.03s
+2025-10-29 12:59:33,599 [INFO] Swell API status: 402
+2025-10-29 12:59:33,599 [ERROR] Swell API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":120}}
+
+2025-10-29 12:59:33,605 [INFO] 127.0.0.1 - - [29/Oct/2025 12:59:33] "GET /weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand&days=0 HTTP/1.1" 200 -
+2025-10-29 13:00:25,826 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 13:00:25,867 [INFO]  * Restarting with stat
+2025-10-29 13:00:26,302 [WARNING]  * Debugger is active!
+2025-10-29 13:00:26,306 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 13:00:52,822 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 13:00:52,865 [INFO]  * Restarting with stat
+2025-10-29 13:00:53,276 [WARNING]  * Debugger is active!
+2025-10-29 13:00:53,279 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 13:00:56,958 [INFO] Incoming /weather-info request: location=Pauanui, Coromandel, New Zealand, days=1
+2025-10-29 13:00:58,162 [INFO] Calling Tide API: https://api.stormglass.io/v2/tide/extremes/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'datum': 'MLLW', 'start': '2025-10-29', 'end': '2025-10-30'}
+2025-10-29 13:00:59,560 [INFO] Response time: 1.40s
+2025-10-29 13:00:59,560 [INFO] Tide API status: 200
+2025-10-29 13:01:01,368 [INFO] 127.0.0.1 - - [29/Oct/2025 13:01:01] "[35m[1mGET /weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand&days=0 HTTP/1.1[0m" 500 -
+2025-10-29 13:01:01,429 [INFO] 127.0.0.1 - - [29/Oct/2025 13:01:01] "[36mGET /weather-info?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-29 13:01:01,430 [INFO] 127.0.0.1 - - [29/Oct/2025 13:01:01] "[36mGET /weather-info?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-29 13:01:01,441 [INFO] 127.0.0.1 - - [29/Oct/2025 13:01:01] "GET /weather-info?__debugger__=yes&cmd=resource&f=console.png&s=wz4mvhBxBqJNuH65hOxU HTTP/1.1" 200 -
+2025-10-29 13:01:01,457 [INFO] 127.0.0.1 - - [29/Oct/2025 13:01:01] "[36mGET /weather-info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-29 13:02:09,777 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 13:02:09,812 [INFO]  * Restarting with stat
+2025-10-29 13:02:10,220 [WARNING]  * Debugger is active!
+2025-10-29 13:02:10,222 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 13:02:22,637 [INFO] Incoming /weather-info request: location=Pauanui, Coromandel, New Zealand, days=1
+2025-10-29 13:02:23,667 [INFO] Calling Tide API: https://api.stormglass.io/v2/tide/extremes/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'datum': 'MLLW', 'start': '2025-10-29', 'end': '2025-10-30'}
+2025-10-29 13:02:24,755 [INFO] Response time: 1.09s
+2025-10-29 13:02:24,755 [INFO] Tide API status: 200
+2025-10-29 13:02:26,038 [INFO] 127.0.0.1 - - [29/Oct/2025 13:02:26] "[35m[1mGET /weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand&days=0 HTTP/1.1[0m" 500 -
+2025-10-29 13:02:26,105 [INFO] 127.0.0.1 - - [29/Oct/2025 13:02:26] "[36mGET /weather-info?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-29 13:02:26,105 [INFO] 127.0.0.1 - - [29/Oct/2025 13:02:26] "[36mGET /weather-info?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-29 13:02:26,116 [INFO] 127.0.0.1 - - [29/Oct/2025 13:02:26] "GET /weather-info?__debugger__=yes&cmd=resource&f=console.png&s=nSGjIDN0coQgMbezTTl5 HTTP/1.1" 200 -
+2025-10-29 13:04:57,998 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 13:04:58,042 [INFO]  * Restarting with stat
+2025-10-29 13:04:58,473 [WARNING]  * Debugger is active!
+2025-10-29 13:04:58,476 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 13:05:29,055 [INFO] Incoming /weather-info request: location=Pauanui, Coromandel, New Zealand, days=1
+2025-10-29 13:05:31,484 [INFO] 127.0.0.1 - - [29/Oct/2025 13:05:31] "[35m[1mGET /weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand&days=0 HTTP/1.1[0m" 500 -
+2025-10-29 13:05:31,548 [INFO] 127.0.0.1 - - [29/Oct/2025 13:05:31] "[36mGET /weather-info?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-29 13:05:31,548 [INFO] 127.0.0.1 - - [29/Oct/2025 13:05:31] "[36mGET /weather-info?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-29 13:05:31,560 [INFO] 127.0.0.1 - - [29/Oct/2025 13:05:31] "GET /weather-info?__debugger__=yes&cmd=resource&f=console.png&s=i6uY6MLZABaWWQBL46MU HTTP/1.1" 200 -
+2025-10-29 13:06:03,806 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 13:06:03,841 [INFO]  * Restarting with stat
+2025-10-29 13:06:04,236 [WARNING]  * Debugger is active!
+2025-10-29 13:06:04,238 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 13:06:06,156 [INFO] Incoming /weather-info request: location=Pauanui, Coromandel, New Zealand, days=1
+2025-10-29 13:06:07,585 [INFO] 127.0.0.1 - - [29/Oct/2025 13:06:07] "[35m[1mGET /weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand&days=0 HTTP/1.1[0m" 500 -
+2025-10-29 13:06:07,648 [INFO] 127.0.0.1 - - [29/Oct/2025 13:06:07] "[36mGET /weather-info?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-29 13:06:07,649 [INFO] 127.0.0.1 - - [29/Oct/2025 13:06:07] "[36mGET /weather-info?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-29 13:06:07,659 [INFO] 127.0.0.1 - - [29/Oct/2025 13:06:07] "GET /weather-info?__debugger__=yes&cmd=resource&f=console.png&s=WhcfiKxw06Coy8dWCHac HTTP/1.1" 200 -
+2025-10-29 13:07:12,580 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 13:07:12,615 [INFO]  * Restarting with stat
+2025-10-29 13:07:13,005 [WARNING]  * Debugger is active!
+2025-10-29 13:07:13,008 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 13:07:15,320 [INFO] Incoming /weather-info request: location=Pauanui, Coromandel, New Zealand, days=1
+2025-10-29 13:07:16,359 [INFO] Calling Tide API: https://api.stormglass.io/v2/tide/extremes/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'datum': 'MLLW', 'start': '2025-10-29', 'end': '2025-10-30'}
+2025-10-29 13:07:17,431 [INFO] Response time: 1.07s
+2025-10-29 13:07:17,431 [INFO] Tide API status: 200
+2025-10-29 13:07:18,653 [INFO] 127.0.0.1 - - [29/Oct/2025 13:07:18] "[35m[1mGET /weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand&days=0 HTTP/1.1[0m" 500 -
+2025-10-29 13:07:18,715 [INFO] 127.0.0.1 - - [29/Oct/2025 13:07:18] "[36mGET /weather-info?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-29 13:07:18,715 [INFO] 127.0.0.1 - - [29/Oct/2025 13:07:18] "[36mGET /weather-info?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-29 13:07:18,724 [INFO] 127.0.0.1 - - [29/Oct/2025 13:07:18] "GET /weather-info?__debugger__=yes&cmd=resource&f=console.png&s=K8samvbaoE1AHlKtMtrQ HTTP/1.1" 200 -
+2025-10-29 13:07:18,738 [INFO] 127.0.0.1 - - [29/Oct/2025 13:07:18] "[36mGET /weather-info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-29 13:08:24,961 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 13:08:24,998 [INFO]  * Restarting with stat
+2025-10-29 13:08:25,413 [WARNING]  * Debugger is active!
+2025-10-29 13:08:25,415 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 13:08:29,547 [INFO] Incoming /weather-info request: location=Pauanui, Coromandel, New Zealand, days=1
+2025-10-29 13:08:30,616 [INFO] Calling Tide API: https://api.stormglass.io/v2/tide/extremes/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'datum': 'MLLW', 'start': '2025-10-29', 'end': '2025-10-30'}
+2025-10-29 13:08:31,673 [INFO] Response time: 1.06s
+2025-10-29 13:08:31,673 [INFO] Tide API status: 200
+2025-10-29 13:08:32,895 [INFO] 127.0.0.1 - - [29/Oct/2025 13:08:32] "[35m[1mGET /weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand&days=0 HTTP/1.1[0m" 500 -
+2025-10-29 13:08:32,956 [INFO] 127.0.0.1 - - [29/Oct/2025 13:08:32] "[36mGET /weather-info?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-29 13:08:32,957 [INFO] 127.0.0.1 - - [29/Oct/2025 13:08:32] "[36mGET /weather-info?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-29 13:08:32,967 [INFO] 127.0.0.1 - - [29/Oct/2025 13:08:32] "GET /weather-info?__debugger__=yes&cmd=resource&f=console.png&s=dokgNv4qhkxdKhV5SMjF HTTP/1.1" 200 -
+2025-10-29 13:08:32,983 [INFO] 127.0.0.1 - - [29/Oct/2025 13:08:32] "[36mGET /weather-info?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-10-29 13:09:12,178 [INFO] Incoming /weather-info request: location=Pauanui, Coromandel, New Zealand, days=1
+2025-10-29 13:09:13,276 [INFO] Calling Tide API: https://api.stormglass.io/v2/tide/extremes/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'datum': 'MLLW', 'start': '2025-10-29', 'end': '2025-10-30'}
+2025-10-29 13:09:14,417 [INFO] Response time: 1.14s
+2025-10-29 13:09:14,417 [INFO] Tide API status: 200
+2025-10-29 13:09:15,903 [INFO] 127.0.0.1 - - [29/Oct/2025 13:09:15] "[35m[1mGET /weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand HTTP/1.1[0m" 500 -
+2025-10-29 13:09:15,920 [INFO] 127.0.0.1 - - [29/Oct/2025 13:09:15] "[36mGET /weather-info?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-10-29 13:09:15,921 [INFO] 127.0.0.1 - - [29/Oct/2025 13:09:15] "[36mGET /weather-info?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-10-29 13:09:15,932 [INFO] 127.0.0.1 - - [29/Oct/2025 13:09:15] "[36mGET /weather-info?__debugger__=yes&cmd=resource&f=console.png&s=dokgNv4qhkxdKhV5SMjF HTTP/1.1[0m" 304 -
+2025-10-29 13:14:17,624 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 13:14:17,664 [INFO]  * Restarting with stat
+2025-10-29 13:14:50,034 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5050
+2025-10-29 13:14:50,034 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-29 13:14:50,035 [INFO]  * Restarting with stat
+2025-10-29 13:14:50,479 [WARNING]  * Debugger is active!
+2025-10-29 13:14:50,481 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 13:14:52,497 [WARNING]  * Debugger is active!
+2025-10-29 13:14:52,497 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 13:14:52,554 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5050
+2025-10-29 13:14:52,554 [INFO] [33mPress CTRL+C to quit[0m
+2025-10-29 13:14:52,554 [INFO]  * Restarting with stat
+2025-10-29 13:14:52,953 [WARNING]  * Debugger is active!
+2025-10-29 13:14:52,955 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 13:14:59,889 [INFO] Incoming /weather-info request: location=Pauanui, Coromandel, New Zealand, days=1
+2025-10-29 13:15:00,962 [INFO] Calling Tide API: https://api.stormglass.io/v2/tide/extremes/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'datum': 'MLLW', 'start': '2025-10-29', 'end': '2025-10-30'}
+2025-10-29 13:15:02,026 [INFO] Response time: 1.06s
+2025-10-29 13:15:02,026 [INFO] Tide API status: 200
+2025-10-29 13:15:03,662 [INFO] Calling Weather API: https://api.stormglass.io/v2/weather/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'params': 'windDirection,windSpeed', 'source': 'noaa', 'start': '2025-10-29', 'end': '2025-10-30'}
+2025-10-29 13:15:04,734 [INFO] Response time: 1.07s
+2025-10-29 13:15:04,735 [INFO] Weather API status: 200
+2025-10-29 13:15:14,676 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'date': '2025-10-29'}
+2025-10-29 13:15:15,714 [INFO] Response time: 1.04s
+2025-10-29 13:15:15,714 [INFO] Astronomy API status (2025-10-29): 402
+2025-10-29 13:15:15,714 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":11}}
+
+2025-10-29 13:15:15,714 [INFO] Calling Swell API: https://api.stormglass.io/v2/weather/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'params': 'swellHeight', 'source': 'noaa', 'start': '2025-10-29', 'end': '2025-10-30'}
+2025-10-29 13:15:16,767 [INFO] Response time: 1.05s
+2025-10-29 13:15:16,767 [INFO] Swell API status: 402
+2025-10-29 13:15:16,767 [ERROR] Swell API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":12}}
+
+2025-10-29 13:15:16,774 [INFO] 127.0.0.1 - - [29/Oct/2025 13:15:16] "GET /weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand HTTP/1.1" 200 -
+2025-10-29 13:19:32,753 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 13:19:32,798 [INFO]  * Restarting with stat
+2025-10-29 13:19:33,207 [WARNING]  * Debugger is active!
+2025-10-29 13:19:33,209 [INFO]  * Debugger PIN: 133-051-138
+2025-10-29 13:19:49,264 [INFO] Incoming /weather-info request: location=Pauanui, Coromandel, New Zealand, days=1
+2025-10-29 13:19:50,502 [INFO] Calling Tide API: https://api.stormglass.io/v2/tide/extremes/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'datum': 'MLLW', 'start': '2025-10-29', 'end': '2025-10-29'}
+2025-10-29 13:19:51,682 [INFO] Response time: 1.18s
+2025-10-29 13:19:51,682 [INFO] Tide API status: 402
+2025-10-29 13:19:51,682 [ERROR] Tide API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":13}}
+
+2025-10-29 13:19:51,682 [INFO] Calling Weather API: https://api.stormglass.io/v2/weather/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'params': 'windDirection,windSpeed', 'source': 'noaa', 'start': '2025-10-29', 'end': '2025-10-29'}
+2025-10-29 13:19:52,716 [INFO] Response time: 1.03s
+2025-10-29 13:19:52,717 [INFO] Weather API status: 402
+2025-10-29 13:19:52,717 [ERROR] Weather API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":14}}
+
+2025-10-29 13:19:52,717 [INFO] Calling Astronomy API: https://api.stormglass.io/v2/astronomy/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'date': '2025-10-29'}
+2025-10-29 13:19:53,744 [INFO] Response time: 1.03s
+2025-10-29 13:19:53,745 [INFO] Astronomy API status (2025-10-29): 402
+2025-10-29 13:19:53,745 [ERROR] Astronomy API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":15}}
+
+2025-10-29 13:19:53,745 [INFO] Calling Swell API: https://api.stormglass.io/v2/weather/point with params: {'lat': -37.0242711, 'lng': 175.8648118, 'params': 'swellHeight', 'source': 'noaa', 'start': '2025-10-29', 'end': '2025-10-29'}
+2025-10-29 13:19:54,789 [INFO] Response time: 1.04s
+2025-10-29 13:19:54,789 [INFO] Swell API status: 402
+2025-10-29 13:19:54,789 [ERROR] Swell API failed: {"errors":{"key":"API quota exceeded"},"meta":{"dailyQuota":10,"requestCount":16}}
+
+2025-10-29 13:19:54,795 [INFO] 127.0.0.1 - - [29/Oct/2025 13:19:54] "GET /weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand HTTP/1.1" 200 -
+2025-10-29 13:22:03,244 [INFO]  * Detected change in 'C:\\Users\\Franco.Cardinali\\PycharmProjects\\fishingAgent\\app.py', reloading
+2025-10-29 13:22:03,290 [INFO]  * Restarting with stat
+2025-10-29 13:22:03,700 [WARNING]  * Debugger is active!
+2025-10-29 13:22:03,702 [INFO]  * Debugger PIN: 133-051-138
