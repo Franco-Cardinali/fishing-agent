@@ -44,9 +44,13 @@ def get_coordinates(location_name):
     response = requests.get(url, params=params, headers={
                             'User-Agent': 'weather-agent'})
     data = response.json()
+
     if data:
-        return float(data[0]['lat']), float(data[0]['lon'])
-    return None, None
+        lat = float(data[0]['lat'])
+        lon = float(data[0]['lon'])
+        display_name = data[0]['display_name']
+        return lat, lon, display_name
+    return None, None, None
 
 
 @app.route('/weather-info', methods=['GET'])
@@ -58,7 +62,7 @@ def get_weather_info():
     logging.info(
         f"Incoming /weather-info request: location={location}, days={days}")
 
-    lat, lng = get_coordinates(location)
+    lat, lng, display_name = get_coordinates(location)
     if lat is None or lng is None:
         return jsonify({'error': f'Could not resolve location: {location}'}), 400
     today = datetime.now(timezone.utc).date()
@@ -78,7 +82,7 @@ def get_weather_info():
     headers = {'Authorization': API_KEY}
     results = {
         'coordinates': {'lat': lat, 'lng': lng},
-        'location': location,
+        'location': display_name,
         'forecast': {}
     }
 
@@ -330,8 +334,8 @@ def get_weather_info():
         }
 
         # Tide extremes
-        tide_url = 'https://api.stormglass.io/v2/tide/extremes/point'
-        tide_params = {'lat': lat, 'lng': lng,'datum': 'MLLW', 'start': start, 'end': end}
+    tide_url = 'https://api.stormglass.io/v2/tide/extremes/point'
+    tide_params = {'lat': lat, 'lng': lng,'datum': 'MLLW', 'start': start, 'end': end}
 
     start_time = time.time()
     logging.info(f"Calling Tide API: {tide_url} with params: {tide_params}")
@@ -431,7 +435,7 @@ def get_weather_info():
                 results['forecast'][date_str]['moon_phase'] = astro.get(
                     'moonPhase')
 
-    # 🌊 Swell height
+    # Swell height
     swell_params = {
         'lat': lat,
         'lng': lng,
