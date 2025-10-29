@@ -37,7 +37,7 @@ def convert_to_local_time(utc_time_str, lat, lng):
     local_dt = utc_dt.astimezone(local_tz)
     return local_dt
 
-
+#This will get the Coordinates and the Display Name of the location 
 def get_coordinates(location_name):
     url = "https://nominatim.openstreetmap.org/search"
     params = {'q': location_name, 'format': 'json', 'limit': 1}
