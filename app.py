@@ -16,6 +16,17 @@ logging.basicConfig(
     ]
 )
 
+def get_utc_shift_hours(lat, lng):
+    tf = TimezoneFinder()
+    tz_name = tf.timezone_at(lat=lat, lng=lng)
+    if not tz_name:
+        tz_name = 'Pacific/Auckland'
+    local_tz = pytz.timezone(tz_name)
+    now_utc = datetime.now(timezone.utc)
+    local_dt = now_utc.astimezone(local_tz)
+    offset = local_dt.utcoffset()
+    return int(offset.total_seconds() // 3600)
+
 def ensure_forecast_date(results, date_str):
     if date_str not in results['forecast']:
         results['forecast'][date_str] = {
@@ -69,8 +80,7 @@ def get_weather_info():
     days = request.args.get('days', default=1, type=int)
     days = max(1, min(days, 7))
 
-    logging.info(
-        f"Incoming /weather-info request: location={location}, days={days}")
+    logging.info(f"Incoming /weather-info request: location={location}, days={days}")
 
     lat, lng, display_name = get_coordinates(location)
     if lat is None or lng is None:
@@ -149,6 +159,14 @@ def get_weather_info():
         elif entry['type'] == 'low':
             results['forecast'][date_str]['low_tide'].append(tide_info)
 
+    shift_hours = get_utc_shift_hours(lat, lng)
+
+    weather_start_dt = datetime.combine(today, dt_time.min, tzinfo=timezone.utc) - timedelta(hours=shift_hours)
+    weather_end_dt = datetime.combine(today + timedelta(days=days), dt_time.min,tzinfo=timezone.utc) - timedelta(hours=shift_hours)
+
+    weather_start = int(weather_start_dt.timestamp())
+    weather_end = int(weather_end_dt.timestamp())
+
     # Wind data
     weather_url = 'https://api.stormglass.io/v2/weather/point'
     weather_params = {
@@ -156,8 +174,9 @@ def get_weather_info():
         'lng': lng,
         'params': 'windDirection,windSpeed',
         'source': 'noaa',
-        'start': start,
-        'end': end
+        'start': weather_start,
+        'end': weather_end
+
     }
     logging.info(f"Calling Weather API: {weather_url} with params: {weather_params}")
 
@@ -229,8 +248,9 @@ def get_weather_info():
         'lng': lng,
         'params': 'swellHeight',
         'source': 'noaa',
-        'start': start,
-        'end': end
+        'start': weather_start,
+        'end': weather_end
+
     }
     logging.info(f"Calling Swell API: { weather_url} with params: {swell_params}")
 
