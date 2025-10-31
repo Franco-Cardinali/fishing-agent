@@ -21,6 +21,21 @@ logging.basicConfig(
 
 app = Flask(__name__)
 
+
+def ensure_forecast_date(results, date_str):
+    if date_str not in results['forecast']:
+        results['forecast'][date_str] = {
+            'high_tide': [],
+            'low_tide': [],
+            'sunrise': None,
+            'sunset': None,
+            'moon': {},
+            'moon_phase': None,
+            'swell_height': [],
+            'wind': []
+        }
+
+
 API_KEY = '2c92f59a-bec1-11ed-a654-0242ac130002-2c92f644-bec1-11ed-a654-0242ac130002'
 
 # In-memory cache by lat/lng per day range
@@ -37,7 +52,7 @@ def convert_to_local_time(utc_time_str, lat, lng):
     local_dt = utc_dt.astimezone(local_tz)
     return local_dt
 
-#This will get the Coordinates and the Display Name of the location 
+#This will get the Coordinates and the Display Name of the location
 def get_coordinates(location_name):
     url = "https://nominatim.openstreetmap.org/search"
     params = {'q': location_name, 'format': 'json', 'limit': 1}
@@ -71,8 +86,10 @@ def get_weather_info():
     start_dt = datetime.combine(today, dt_time.min, tzinfo=timezone.utc)
     end_dt = datetime.combine(today + timedelta(days=days - 1),
                           dt_time.max, tzinfo=timezone.utc)
-    start = start_dt.isoformat()
-    end = end_dt.isoformat()
+
+    start = int(start_dt.timestamp())  # Unix timestamp for Stormglass
+    end = int(end_dt.timestamp())  # Unix timestamp for Stormglass
+
     cache_key = f"{lat}_{lng}_{start}_{end}"
 
     if cache_key in daily_cache_by_coords:
@@ -127,9 +144,9 @@ def get_weather_info():
             'height': round(entry['height'], 2)
         }
         if entry['type'] == 'high':
-            results['forecast'][date_str]['high_tide'].append(tide_info)
+            ensure_forecast_date(results, date_str)
         elif entry['type'] == 'low':
-            results['forecast'][date_str]['low_tide'].append(tide_info)
+            ensure_forecast_date(results, date_str)
 
     # Wind data
     weather_url = 'https://api.stormglass.io/v2/weather/point'
@@ -391,6 +408,7 @@ def get_weather_info():
         wind_speed = entry.get('windSpeed', {}).get('noaa')
         wind_dir = entry.get('windDirection', {}).get('noaa')
         if wind_speed is not None and wind_dir is not None:
+            ensure_forecast_date(results, date_str)
             results['forecast'][date_str]['wind'].append({
                 'time': local_dt.strftime('%Y-%m-%d %H:%M %Z'),
                 'speed_kmh': round(wind_speed * 3.6, 2),
@@ -464,11 +482,11 @@ def get_weather_info():
         date_str = local_dt.date().isoformat()
         swell_height = entry.get('swellHeight', {}).get('noaa')
         if swell_height is not None:
+            ensure_forecast_date(results, date_str)
             results['forecast'][date_str]['swell_height'].append({
                 'time': local_dt.strftime('%Y-%m-%d %H:%M %Z'),
                 'height_m': round(swell_height, 2)
             })
-
     daily_cache_by_coords[cache_key] = results
     print(f"Cached new data for {cache_key}")
     return jsonify(results)
