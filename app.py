@@ -6,13 +6,14 @@ import requests
 from datetime import datetime, timedelta, timezone
 from timezonefinder import TimezoneFinder
 import pytz
+import sys
 
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s [%(levelname)s] %(message)s',
     handlers=[
         logging.FileHandler("app.log"),
-        logging.StreamHandler()
+        logging.StreamHandler(sys.stdout)
     ]
 )
 
@@ -89,12 +90,14 @@ def get_weather_info():
     # Get today's date in UTC
     today = datetime.now(timezone.utc).date()
 
-    # Set start to midnight UTC of today — this ensures we only get today's tides and forward
-    start_dt = datetime.combine(today, dt_time.min, tzinfo=timezone.utc)
-
-    # Set end to midnight UTC of the day after the last requested day
-    # This ensures we get full tide data for all requested days
-    end_dt = datetime.combine(today + timedelta(days=days), dt_time.min, tzinfo=timezone.utc)
+    shift_hours = get_utc_shift_hours(lat, lng)
+    if days == 1:
+        start_dt = datetime.combine(today, dt_time.min, tzinfo=timezone.utc) - timedelta(hours=shift_hours)
+        end_dt = datetime.combine(today + timedelta(days=1), dt_time.min, tzinfo=timezone.utc) - timedelta(
+            hours=shift_hours)
+    else:
+        start_dt = datetime.combine(today, dt_time.min, tzinfo=timezone.utc)
+        end_dt = datetime.combine(today + timedelta(days=days), dt_time.min, tzinfo=timezone.utc)
 
     # Convert to Unix timestamps for Stormglass API
     start = int(start_dt.timestamp())  # Start of today in UTC
@@ -104,7 +107,7 @@ def get_weather_info():
     cache_key = f"{lat}_{lng}_{start}_{end}"
 
     if cache_key in daily_cache_by_coords:
-        print(f"Using cached data for {cache_key}")
+        logging.info(f"Using cached data for {cache_key}")
         return jsonify(daily_cache_by_coords[cache_key])
 
     headers = {'Authorization': API_KEY}
@@ -113,10 +116,8 @@ def get_weather_info():
         'forecast': {}
     }
 
-    # Initialize forecast dictionary for each day
-    for i in range(days):
-        date = today + timedelta(days=i)
-        date_str = date.isoformat()
+    requested_dates = [(today + timedelta(days=i)).isoformat() for i in range(days)]
+    for date_str in requested_dates:
         results['forecast'][date_str] = {
             'high_tide': [],
             'low_tide': [],
@@ -148,6 +149,10 @@ def get_weather_info():
     for entry in tide_data.get('data', []):
         local_dt = convert_to_local_time(entry['time'], lat, lng)
         date_str = local_dt.date().isoformat()
+
+        if date_str not in results['forecast']:
+            continue
+
         tide_info = {
             'time': local_dt.strftime('%Y-%m-%d %H:%M %Z'),
             'height': round(entry['height'], 2)
@@ -194,6 +199,10 @@ def get_weather_info():
     for entry in weather_data.get('hours', []):
         local_dt = convert_to_local_time(entry['time'], lat, lng)
         date_str = local_dt.date().isoformat()
+
+        if date_str not in results['forecast']:
+            continue
+
         wind_speed = entry.get('windSpeed', {}).get('noaa')
         wind_dir = entry.get('windDirection', {}).get('noaa')
         if wind_speed is not None and wind_dir is not None:
@@ -270,6 +279,10 @@ def get_weather_info():
     for entry in swell_data.get('hours', []):
         local_dt = convert_to_local_time(entry['time'], lat, lng)
         date_str = local_dt.date().isoformat()
+
+        if date_str not in results['forecast']:
+            continue
+
         swell_height = entry.get('swellHeight', {}).get('noaa')
         if swell_height is not None:
             ensure_forecast_date(results, date_str)
@@ -278,7 +291,7 @@ def get_weather_info():
                 'height_m': round(swell_height, 2)
             })
     daily_cache_by_coords[cache_key] = results
-    print(f"Cached new data for {cache_key}")
+    logging.info(f"Cached new data for {cache_key}")
     return jsonify(results)
 
 if __name__ == '__main__':
