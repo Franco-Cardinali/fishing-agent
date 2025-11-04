@@ -372,7 +372,7 @@ def get_weather_info():
     results['units'] = {
     'height': 'meters',
     'speed': 'km/h',
-    'temperature': '°C',
+    'temperature': 'C',
     'precipitation': 'mm',
     'direction': 'degrees'
 }
