@@ -1,0 +1,552 @@
+{
+  "coordinates": {
+    "lat": -37.0242711,
+    "lng": 175.8648118
+  },
+  "forecast": {
+    "2025-11-04": {
+      "high_tide": [
+        {
+          "height": 1.79,
+          "time": "2025-11-04 06:23 NZDT"
+        },
+        {
+          "height": 1.86,
+          "time": "2025-11-04 18:40 NZDT"
+        }
+      ],
+      "low_tide": [
+        {
+          "height": 0.18,
+          "time": "2025-11-04 12:29 NZDT"
+        }
+      ],
+      "moon": {
+        "rise": "2025-11-03 17:05 NZDT",
+        "set": "2025-11-04 04:49 NZDT"
+      },
+      "moon_phase": {
+        "closest": {
+          "text": "Full moon",
+          "time": "2025-11-05T19:18:00+00:00",
+          "value": 0.5
+        },
+        "current": {
+          "text": "Waxing gibbous",
+          "time": "2025-11-03T00:00:00+00:00",
+          "value": 0.405028700943238
+        }
+      },
+      "summary": {
+        "sunrise": "2025-11-03 06:10 NZDT",
+        "sunset": "2025-11-03 19:52 NZDT",
+        "swell_peak_m": 0.82,
+        "tide": "2 high, 1 low",
+        "wind_peak_kmh": 29.59
+      },
+      "sunrise": "2025-11-03 06:10 NZDT",
+      "sunset": "2025-11-03 19:52 NZDT",
+      "swell_height": [
+        {
+          "height_m": 0.76,
+          "time": "2025-11-04 00:00 NZDT"
+        },
+        {
+          "height_m": 0.76,
+          "time": "2025-11-04 01:00 NZDT"
+        },
+        {
+          "height_m": 0.76,
+          "time": "2025-11-04 02:00 NZDT"
+        },
+        {
+          "height_m": 0.77,
+          "time": "2025-11-04 03:00 NZDT"
+        },
+        {
+          "height_m": 0.77,
+          "time": "2025-11-04 04:00 NZDT"
+        },
+        {
+          "height_m": 0.78,
+          "time": "2025-11-04 05:00 NZDT"
+        },
+        {
+          "height_m": 0.78,
+          "time": "2025-11-04 06:00 NZDT"
+        },
+        {
+          "height_m": 0.79,
+          "time": "2025-11-04 07:00 NZDT"
+        },
+        {
+          "height_m": 0.79,
+          "time": "2025-11-04 08:00 NZDT"
+        },
+        {
+          "height_m": 0.8,
+          "time": "2025-11-04 09:00 NZDT"
+        },
+        {
+          "height_m": 0.8,
+          "time": "2025-11-04 10:00 NZDT"
+        },
+        {
+          "height_m": 0.81,
+          "time": "2025-11-04 11:00 NZDT"
+        },
+        {
+          "height_m": 0.81,
+          "time": "2025-11-04 12:00 NZDT"
+        },
+        {
+          "height_m": 0.82,
+          "time": "2025-11-04 13:00 NZDT"
+        },
+        {
+          "height_m": 0.8,
+          "time": "2025-11-04 14:00 NZDT"
+        },
+        {
+          "height_m": 0.78,
+          "time": "2025-11-04 15:00 NZDT"
+        },
+        {
+          "height_m": 0.76,
+          "time": "2025-11-04 16:00 NZDT"
+        },
+        {
+          "height_m": 0.74,
+          "time": "2025-11-04 17:00 NZDT"
+        },
+        {
+          "height_m": 0.73,
+          "time": "2025-11-04 18:00 NZDT"
+        },
+        {
+          "height_m": 0.71,
+          "time": "2025-11-04 19:00 NZDT"
+        },
+        {
+          "height_m": 0.74,
+          "time": "2025-11-04 20:00 NZDT"
+        },
+        {
+          "height_m": 0.78,
+          "time": "2025-11-04 21:00 NZDT"
+        },
+        {
+          "height_m": 0.81,
+          "time": "2025-11-04 22:00 NZDT"
+        },
+        {
+          "height_m": 0.79,
+          "time": "2025-11-04 23:00 NZDT"
+        }
+      ],
+      "wind": [
+        {
+          "direction_deg": 332.77,
+          "speed_kmh": 11.23,
+          "time": "2025-11-04 00:00 NZDT"
+        },
+        {
+          "direction_deg": 321.8,
+          "speed_kmh": 9.54,
+          "time": "2025-11-04 01:00 NZDT"
+        },
+        {
+          "direction_deg": 300.78,
+          "speed_kmh": 9.25,
+          "time": "2025-11-04 02:00 NZDT"
+        },
+        {
+          "direction_deg": 279.76,
+          "speed_kmh": 8.93,
+          "time": "2025-11-04 03:00 NZDT"
+        },
+        {
+          "direction_deg": 258.74,
+          "speed_kmh": 8.64,
+          "time": "2025-11-04 04:00 NZDT"
+        },
+        {
+          "direction_deg": 255.9,
+          "speed_kmh": 8.06,
+          "time": "2025-11-04 05:00 NZDT"
+        },
+        {
+          "direction_deg": 253.07,
+          "speed_kmh": 7.49,
+          "time": "2025-11-04 06:00 NZDT"
+        },
+        {
+          "direction_deg": 250.23,
+          "speed_kmh": 6.91,
+          "time": "2025-11-04 07:00 NZDT"
+        },
+        {
+          "direction_deg": 300.86,
+          "speed_kmh": 5.9,
+          "time": "2025-11-04 08:00 NZDT"
+        },
+        {
+          "direction_deg": 351.48,
+          "speed_kmh": 4.9,
+          "time": "2025-11-04 09:00 NZDT"
+        },
+        {
+          "direction_deg": 42.11,
+          "speed_kmh": 3.89,
+          "time": "2025-11-04 10:00 NZDT"
+        },
+        {
+          "direction_deg": 29.51,
+          "speed_kmh": 10.48,
+          "time": "2025-11-04 11:00 NZDT"
+        },
+        {
+          "direction_deg": 16.91,
+          "speed_kmh": 17.1,
+          "time": "2025-11-04 12:00 NZDT"
+        },
+        {
+          "direction_deg": 4.31,
+          "speed_kmh": 23.69,
+          "time": "2025-11-04 13:00 NZDT"
+        },
+        {
+          "direction_deg": 5.49,
+          "speed_kmh": 25.67,
+          "time": "2025-11-04 14:00 NZDT"
+        },
+        {
+          "direction_deg": 6.66,
+          "speed_kmh": 27.61,
+          "time": "2025-11-04 15:00 NZDT"
+        },
+        {
+          "direction_deg": 7.84,
+          "speed_kmh": 29.59,
+          "time": "2025-11-04 16:00 NZDT"
+        },
+        {
+          "direction_deg": 0.24,
+          "speed_kmh": 27.97,
+          "time": "2025-11-04 17:00 NZDT"
+        },
+        {
+          "direction_deg": 352.64,
+          "speed_kmh": 26.32,
+          "time": "2025-11-04 18:00 NZDT"
+        },
+        {
+          "direction_deg": 345.04,
+          "speed_kmh": 24.7,
+          "time": "2025-11-04 19:00 NZDT"
+        },
+        {
+          "direction_deg": 308.94,
+          "speed_kmh": 21.38,
+          "time": "2025-11-04 20:00 NZDT"
+        },
+        {
+          "direction_deg": 272.83,
+          "speed_kmh": 18.04,
+          "time": "2025-11-04 21:00 NZDT"
+        },
+        {
+          "direction_deg": 236.73,
+          "speed_kmh": 14.72,
+          "time": "2025-11-04 22:00 NZDT"
+        },
+        {
+          "direction_deg": 237.56,
+          "speed_kmh": 13.82,
+          "time": "2025-11-04 23:00 NZDT"
+        }
+      ]
+    },
+    "2025-11-05": {
+      "high_tide": [
+        {
+          "height": 1.9,
+          "time": "2025-11-05 07:14 NZDT"
+        },
+        {
+          "height": 1.93,
+          "time": "2025-11-05 19:29 NZDT"
+        }
+      ],
+      "low_tide": [
+        {
+          "height": 0.02,
+          "time": "2025-11-05 00:55 NZDT"
+        },
+        {
+          "height": 0.1,
+          "time": "2025-11-05 13:21 NZDT"
+        }
+      ],
+      "moon": {
+        "rise": "2025-11-03 17:05 NZDT",
+        "set": "2025-11-04 04:49 NZDT"
+      },
+      "moon_phase": {
+        "closest": {
+          "text": "Full moon",
+          "time": "2025-11-05T19:18:00+00:00",
+          "value": 0.5
+        },
+        "current": {
+          "text": "Waxing gibbous",
+          "time": "2025-11-03T00:00:00+00:00",
+          "value": 0.405028700943238
+        }
+      },
+      "summary": {
+        "sunrise": "2025-11-03 06:10 NZDT",
+        "sunset": "2025-11-03 19:52 NZDT",
+        "swell_peak_m": 0.77,
+        "tide": "2 high, 2 low",
+        "wind_peak_kmh": 25.34
+      },
+      "sunrise": "2025-11-03 06:10 NZDT",
+      "sunset": "2025-11-03 19:52 NZDT",
+      "swell_height": [
+        {
+          "height_m": 0.77,
+          "time": "2025-11-05 00:00 NZDT"
+        },
+        {
+          "height_m": 0.75,
+          "time": "2025-11-05 01:00 NZDT"
+        },
+        {
+          "height_m": 0.74,
+          "time": "2025-11-05 02:00 NZDT"
+        },
+        {
+          "height_m": 0.74,
+          "time": "2025-11-05 03:00 NZDT"
+        },
+        {
+          "height_m": 0.73,
+          "time": "2025-11-05 04:00 NZDT"
+        },
+        {
+          "height_m": 0.73,
+          "time": "2025-11-05 05:00 NZDT"
+        },
+        {
+          "height_m": 0.73,
+          "time": "2025-11-05 06:00 NZDT"
+        },
+        {
+          "height_m": 0.73,
+          "time": "2025-11-05 07:00 NZDT"
+        },
+        {
+          "height_m": 0.73,
+          "time": "2025-11-05 08:00 NZDT"
+        },
+        {
+          "height_m": 0.73,
+          "time": "2025-11-05 09:00 NZDT"
+        },
+        {
+          "height_m": 0.73,
+          "time": "2025-11-05 10:00 NZDT"
+        },
+        {
+          "height_m": 0.73,
+          "time": "2025-11-05 11:00 NZDT"
+        },
+        {
+          "height_m": 0.73,
+          "time": "2025-11-05 12:00 NZDT"
+        },
+        {
+          "height_m": 0.73,
+          "time": "2025-11-05 13:00 NZDT"
+        },
+        {
+          "height_m": 0.72,
+          "time": "2025-11-05 14:00 NZDT"
+        },
+        {
+          "height_m": 0.72,
+          "time": "2025-11-05 15:00 NZDT"
+        },
+        {
+          "height_m": 0.71,
+          "time": "2025-11-05 16:00 NZDT"
+        },
+        {
+          "height_m": 0.7,
+          "time": "2025-11-05 17:00 NZDT"
+        },
+        {
+          "height_m": 0.7,
+          "time": "2025-11-05 18:00 NZDT"
+        },
+        {
+          "height_m": 0.69,
+          "time": "2025-11-05 19:00 NZDT"
+        },
+        {
+          "height_m": 0.69,
+          "time": "2025-11-05 20:00 NZDT"
+        },
+        {
+          "height_m": 0.68,
+          "time": "2025-11-05 21:00 NZDT"
+        },
+        {
+          "height_m": 0.68,
+          "time": "2025-11-05 22:00 NZDT"
+        },
+        {
+          "height_m": 0.68,
+          "time": "2025-11-05 23:00 NZDT"
+        }
+      ],
+      "wind": [
+        {
+          "direction_deg": 238.4,
+          "speed_kmh": 12.96,
+          "time": "2025-11-05 00:00 NZDT"
+        },
+        {
+          "direction_deg": 239.23,
+          "speed_kmh": 12.06,
+          "time": "2025-11-05 01:00 NZDT"
+        },
+        {
+          "direction_deg": 245.85,
+          "speed_kmh": 11.63,
+          "time": "2025-11-05 02:00 NZDT"
+        },
+        {
+          "direction_deg": 252.47,
+          "speed_kmh": 11.16,
+          "time": "2025-11-05 03:00 NZDT"
+        },
+        {
+          "direction_deg": 259.09,
+          "speed_kmh": 10.73,
+          "time": "2025-11-05 04:00 NZDT"
+        },
+        {
+          "direction_deg": 224.71,
+          "speed_kmh": 13.43,
+          "time": "2025-11-05 05:00 NZDT"
+        },
+        {
+          "direction_deg": 190.33,
+          "speed_kmh": 16.09,
+          "time": "2025-11-05 06:00 NZDT"
+        },
+        {
+          "direction_deg": 155.95,
+          "speed_kmh": 18.79,
+          "time": "2025-11-05 07:00 NZDT"
+        },
+        {
+          "direction_deg": 145.88,
+          "speed_kmh": 14.18,
+          "time": "2025-11-05 08:00 NZDT"
+        },
+        {
+          "direction_deg": 135.8,
+          "speed_kmh": 9.54,
+          "time": "2025-11-05 09:00 NZDT"
+        },
+        {
+          "direction_deg": 125.73,
+          "speed_kmh": 4.93,
+          "time": "2025-11-05 10:00 NZDT"
+        },
+        {
+          "direction_deg": 100.03,
+          "speed_kmh": 8.32,
+          "time": "2025-11-05 11:00 NZDT"
+        },
+        {
+          "direction_deg": 74.34,
+          "speed_kmh": 11.66,
+          "time": "2025-11-05 12:00 NZDT"
+        },
+        {
+          "direction_deg": 48.64,
+          "speed_kmh": 15.05,
+          "time": "2025-11-05 13:00 NZDT"
+        },
+        {
+          "direction_deg": 38.18,
+          "speed_kmh": 17.21,
+          "time": "2025-11-05 14:00 NZDT"
+        },
+        {
+          "direction_deg": 27.72,
+          "speed_kmh": 19.37,
+          "time": "2025-11-05 15:00 NZDT"
+        },
+        {
+          "direction_deg": 17.26,
+          "speed_kmh": 21.53,
+          "time": "2025-11-05 16:00 NZDT"
+        },
+        {
+          "direction_deg": 8.97,
+          "speed_kmh": 22.79,
+          "time": "2025-11-05 17:00 NZDT"
+        },
+        {
+          "direction_deg": 0.69,
+          "speed_kmh": 24.08,
+          "time": "2025-11-05 18:00 NZDT"
+        },
+        {
+          "direction_deg": 352.4,
+          "speed_kmh": 25.34,
+          "time": "2025-11-05 19:00 NZDT"
+        },
+        {
+          "direction_deg": 340.95,
+          "speed_kmh": 23.69,
+          "time": "2025-11-05 20:00 NZDT"
+        },
+        {
+          "direction_deg": 329.49,
+          "speed_kmh": 22.0,
+          "time": "2025-11-05 21:00 NZDT"
+        },
+        {
+          "direction_deg": 318.04,
+          "speed_kmh": 20.34,
+          "time": "2025-11-05 22:00 NZDT"
+        },
+        {
+          "direction_deg": 298.56,
+          "speed_kmh": 16.81,
+          "time": "2025-11-05 23:00 NZDT"
+        }
+      ]
+    }
+  },
+  "location": "Pauanui, Thames-Coromandel District, Waikato, 3579, New Zealand / Aotearoa",
+  "meta": {
+    "data_source": "Stormglass",
+    "data_status": "complete",
+    "location": "https://www.google.com/maps?q=-37.0242711,175.8648118",
+    "requested_days": 2,
+    "timezone_name": "NZDT",
+    "timezone_offset": "UTC+13"
+  },
+  "units": {
+    "height": "meters",
+    "speed": "km/h",
+    "time_format": "YYYY-MM-DD HH:mm NZDT"
+  }
+}

@@ -7,6 +7,8 @@ from datetime import datetime, timedelta, timezone
 from timezonefinder import TimezoneFinder
 import pytz
 import sys
+from collections import OrderedDict
+import json
 
 logging.basicConfig(
     level=logging.INFO,
@@ -28,6 +30,7 @@ def get_utc_shift_hours(lat, lng):
     offset = local_dt.utcoffset()
     return int(offset.total_seconds() // 3600)
 
+
 def ensure_forecast_date(results, date_str):
     if date_str not in results['forecast']:
         results['forecast'][date_str] = {
@@ -38,11 +41,21 @@ def ensure_forecast_date(results, date_str):
             'moon': {},
             'moon_phase': None,
             'swell_height': [],
-            'wind': []
+            'wind': [],
+            'airTemperature': [],
+            'waterTemperature': [],
+            'cloudCover': [],
+            'precipitation': []
         }
 
 
-API_KEY = '2c92f59a-bec1-11ed-a654-0242ac130002-2c92f644-bec1-11ed-a654-0242ac130002'
+
+
+API_KEY = 'a3c69958-b8fd-11f0-a148-0242ac130003-a3c69a3e-b8fd-11f0-a148-0242ac130003'
+    #http://127.0.0.1:5050/weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand&days=2
+    #http://127.0.0.1:5050/weather-info?location=Ponza,%20Lazio,%20Italia&days=2
+    # fcardinali'2c92f59a-bec1-11ed-a654-0242ac130002-2c92f644-bec1-11ed-a654-0242ac130002'
+    #franco.cardinali:'a3c69958-b8fd-11f0-a148-0242ac130003-a3c69a3e-b8fd-11f0-a148-0242ac130003'
 
 # In-memory cache by lat/lng per day range
 daily_cache_by_coords = {}
@@ -87,17 +100,20 @@ def get_weather_info():
     if lat is None or lng is None:
         return jsonify({'error': f'Could not resolve location: {location}'}), 400
 
-    # Get today's date in UTC
-    today = datetime.now(timezone.utc).date()
+    # Get today's date in local time
+    tf = TimezoneFinder()
+    tz_name = tf.timezone_at(lat=lat, lng=lng) or 'Pacific/Auckland'
+    local_tz = pytz.timezone(tz_name)
+    local_today = datetime.now(local_tz).date()
 
-    shift_hours = get_utc_shift_hours(lat, lng)
     if days == 1:
-        start_dt = datetime.combine(today, dt_time.min, tzinfo=timezone.utc) - timedelta(hours=shift_hours)
-        end_dt = datetime.combine(today + timedelta(days=1), dt_time.min, tzinfo=timezone.utc) - timedelta(
-            hours=shift_hours)
+        start_dt = datetime.combine(local_today, dt_time.min, tzinfo=local_tz).astimezone(timezone.utc)
+        end_dt = datetime.combine(local_today + timedelta(days=1), dt_time.min, tzinfo=local_tz).astimezone(
+            timezone.utc)
     else:
-        start_dt = datetime.combine(today, dt_time.min, tzinfo=timezone.utc)
-        end_dt = datetime.combine(today + timedelta(days=days), dt_time.min, tzinfo=timezone.utc)
+        start_dt = datetime.combine(local_today, dt_time.min, tzinfo=local_tz).astimezone(timezone.utc)
+        end_dt = datetime.combine(local_today + timedelta(days=days), dt_time.min, tzinfo=local_tz).astimezone(
+            timezone.utc)
 
     # Convert to Unix timestamps for Stormglass API
     start = int(start_dt.timestamp())  # Start of today in UTC
@@ -116,7 +132,7 @@ def get_weather_info():
         'forecast': {}
     }
 
-    requested_dates = [(today + timedelta(days=i)).isoformat() for i in range(days)]
+    requested_dates = [(local_today + timedelta(days=i)).isoformat() for i in range(days)]
     for date_str in requested_dates:
         results['forecast'][date_str] = {
             'high_tide': [],
@@ -126,7 +142,11 @@ def get_weather_info():
             'moon': {},
             'moon_phase': None,
             'swell_height': [],
-            'wind': []
+            'wind': [],
+            'airTemperature': [],
+            'waterTemperature': [],
+            'cloudCover': [],
+            'precipitation': []
         }
 
         # Tide extremes
@@ -166,8 +186,8 @@ def get_weather_info():
 
     shift_hours = get_utc_shift_hours(lat, lng)
 
-    weather_start_dt = datetime.combine(today, dt_time.min, tzinfo=timezone.utc) - timedelta(hours=shift_hours)
-    weather_end_dt = datetime.combine(today + timedelta(days=days), dt_time.min,tzinfo=timezone.utc) - timedelta(hours=shift_hours)
+    weather_start_dt = datetime.combine(local_today, dt_time.min, tzinfo=timezone.utc) - timedelta(hours=shift_hours)
+    weather_end_dt = datetime.combine(local_today + timedelta(days=days), dt_time.min,tzinfo=timezone.utc) - timedelta(hours=shift_hours)
 
     weather_start = int(weather_start_dt.timestamp())
     weather_end = int(weather_end_dt.timestamp())
@@ -177,7 +197,7 @@ def get_weather_info():
     weather_params = {
         'lat': lat,
         'lng': lng,
-        'params': 'windDirection,windSpeed',
+        'params': 'windDirection,windSpeed,airTemperature,precipitation,cloudCover,waterTemperature',
         'source': 'noaa',
         'start': weather_start,
         'end': weather_end
@@ -200,22 +220,60 @@ def get_weather_info():
         local_dt = convert_to_local_time(entry['time'], lat, lng)
         date_str = local_dt.date().isoformat()
 
-        if date_str not in results['forecast']:
+        # Skip if outside requested local date range
+        if date_str not in requested_dates:
             continue
 
+        # ✅ Ensure all keys are initialized before appending anything
+        ensure_forecast_date(results, date_str)
+
+        # Wind
         wind_speed = entry.get('windSpeed', {}).get('noaa')
         wind_dir = entry.get('windDirection', {}).get('noaa')
         if wind_speed is not None and wind_dir is not None:
-            ensure_forecast_date(results, date_str)
             results['forecast'][date_str]['wind'].append({
                 'time': local_dt.strftime('%Y-%m-%d %H:%M %Z'),
                 'speed_kmh': round(wind_speed * 3.6, 2),
                 'direction_deg': wind_dir
             })
 
+        # Air temperature
+        air_temp = entry.get('airTemperature', {}).get('noaa')
+        if air_temp is not None:
+            results['forecast'][date_str]['airTemperature'].append({
+                'time': local_dt.strftime('%Y-%m-%d %H:%M %Z'),
+                'temperature_c': round(air_temp, 1)
+            })
+
+        # Water temperature
+        water_temp = entry.get('waterTemperature', {}).get('noaa')
+        if water_temp is not None:
+            results['forecast'][date_str]['waterTemperature'].append({
+                'time': local_dt.strftime('%Y-%m-%d %H:%M %Z'),
+                'temperature_c': round(water_temp, 1)
+            })
+
+        # Cloud cover
+        cloud_cover = entry.get('cloudCover', {}).get('noaa')
+        if cloud_cover is not None:
+            results['forecast'][date_str]['cloudCover'].append({
+                'time': local_dt.strftime('%Y-%m-%d %H:%M %Z'),
+                'coverage_percent': round(cloud_cover, 1)
+            })
+
+        # Precipitation
+        precipitation = entry.get('precipitation', {}).get('noaa')
+        if precipitation is not None:
+            results['forecast'][date_str]['precipitation'].append({
+                'time': local_dt.strftime('%Y-%m-%d %H:%M %Z'),
+                'amount_mm': round(precipitation, 2)
+            })
+
+
+
     # Astronomy: sunrise, sunset, moonrise, moonset, moon phase
     for i in range(days):
-        date = today + timedelta(days=i)
+        date = local_today + timedelta(days=i)
         date_str = date.isoformat()
         astro_url = 'https://api.stormglass.io/v2/astronomy/point'
         astro_params = {'lat': lat, 'lng': lng, 'date': date_str}
@@ -290,9 +348,85 @@ def get_weather_info():
                 'time': local_dt.strftime('%Y-%m-%d %H:%M %Z'),
                 'height_m': round(swell_height, 2)
             })
+
+
+    # Add metadata and enhancements
+
+
+    tf_meta = TimezoneFinder()
+    tz_name_meta = tf_meta.timezone_at(lat=lat, lng=lng) or 'Pacific/Auckland'
+    local_tz_meta = pytz.timezone(tz_name_meta)
+    now_utc_meta = datetime.now(timezone.utc)
+    local_dt_meta = now_utc_meta.astimezone(local_tz_meta)
+
+    local_dt = convert_to_local_time(datetime.now(timezone.utc).isoformat(), lat, lng)
+    results['meta'] = {
+        'location': f"https://www.google.com/maps?q={lat},{lng}",
+        'timezone_name': local_dt_meta.tzname(),
+        'timezone_offset': f"UTC{int(local_dt_meta.utcoffset().total_seconds() // 3600):+}",
+        'requested_days': days,
+        'data_source': 'Stormglass',
+        'data_status': 'complete' if any(results['forecast'].values()) else 'partial'
+    }
+
+    results['units'] = {
+    'height': 'meters',
+    'speed': 'km/h',
+    'temperature': '°C',
+    'precipitation': 'mm',
+    'direction': 'degrees'
+}
+
+    for date_str, day_data in results['forecast'].items():
+        high_tides = len(day_data.get('high_tide', []))
+        low_tides = len(day_data.get('low_tide', []))
+        wind_speeds = [w['speed_kmh'] for w in day_data.get('wind', []) if 'speed_kmh' in w]
+        swell_heights = [s['height_m'] for s in day_data.get('swell_height', []) if 'height_m' in s]
+
+        air_temps = [t['temperature_c'] for t in day_data.get('airTemperature', []) if 'temperature_c' in t]
+        water_temps = [t['temperature_c'] for t in day_data.get('waterTemperature', []) if 'temperature_c' in t]
+        cloud_covers = [c['coverage_percent'] for c in day_data.get('cloudCover', []) if 'coverage_percent' in c]
+
+        summary = {
+            'tide': f"{high_tides} high, {low_tides} low",
+            'wind_peak_kmh': max(wind_speeds) if wind_speeds else None,
+            'swell_peak_m': max(swell_heights) if swell_heights else None,
+            'air_temp_max_c': max(air_temps) if air_temps else None,
+            'air_temp_min_c': min(air_temps) if air_temps else None,
+            'air_temp_avg_c': round(sum(air_temps) / len(air_temps), 1) if air_temps else None,
+            'water_temp_max_c': max(water_temps) if water_temps else None,
+            'water_temp_min_c': min(water_temps) if water_temps else None,
+            'water_temp_avg_c': round(sum(water_temps) / len(water_temps), 1) if water_temps else None,
+            'cloud_cover_avg_percent': round(sum(cloud_covers) / len(cloud_covers), 1) if cloud_covers else None,
+            'sunrise': day_data.get('sunrise'),
+            'sunset': day_data.get('sunset')
+        }
+
+        # Add summary to day_data
+        day_data['summary'] = summary
+
+        # Reorder keys
+        ordered_keys = [
+            "summary", "high_tide", "low_tide", "sunrise", "sunset", "moon", "moon_phase",
+            "wind", "swell_height", "airTemperature", "waterTemperature", "precipitation", "cloudCover"
+        ]
+
+        ordered_day_data = OrderedDict()
+        for key in ordered_keys:
+            if key in day_data:
+                ordered_day_data[key] = day_data[key]
+        for key in day_data:
+            if key not in ordered_day_data:
+                ordered_day_data[key] = day_data[key]
+
+        # Replace the original forecast entry
+        results['forecast'][date_str] = ordered_day_data
+
     daily_cache_by_coords[cache_key] = results
     logging.info(f"Cached new data for {cache_key}")
+    logging.info(json.dumps(results, indent=2))
     return jsonify(results)
+
 
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=5050)
