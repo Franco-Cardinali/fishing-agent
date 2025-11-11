@@ -51,11 +51,11 @@ def ensure_forecast_date(results, date_str):
 
 
 
-API_KEY = 'a3c69958-b8fd-11f0-a148-0242ac130003-a3c69a3e-b8fd-11f0-a148-0242ac130003'
-    #http://127.0.0.1:5050/weather-info?location=Pauanui,%20Coromandel,%20New%20Zealand&days=2
-    #http://127.0.0.1:5050/weather-info?location=Ponza,%20Lazio,%20Italia&days=2
-    # fcardinali'2c92f59a-bec1-11ed-a654-0242ac130002-2c92f644-bec1-11ed-a654-0242ac130002'
-    #franco.cardinali:'a3c69958-b8fd-11f0-a148-0242ac130003-a3c69a3e-b8fd-11f0-a148-0242ac130003'
+API_KEY = '2c92f59a-bec1-11ed-a654-0242ac130002-2c92f644-bec1-11ed-a654-0242ac130002'
+
+    # Testing Tokens - max 10 call per day Each
+    # '2c92f59a-bec1-11ed-a654-0242ac130002-2c92f644-bec1-11ed-a654-0242ac130002'
+    # 'a3c69958-b8fd-11f0-a148-0242ac130003-a3c69a3e-b8fd-11f0-a148-0242ac130003'
 
 # In-memory cache by lat/lng per day range
 daily_cache_by_coords = {}
@@ -273,26 +273,43 @@ def get_weather_info():
 
     # Astronomy: sunrise, sunset, moonrise, moonset, moon phase
     for i in range(days):
-        date = local_today + timedelta(days=i)
-        date_str = date.isoformat()
+        # Step 1: Get the local date for this iteration
+        local_date = local_today + timedelta(days=i)
+        query_date = local_date + timedelta(days=1)  # shift forward for Stormglass
+
+        # Step 2: Create a datetime object for midnight of that local date
+        local_midnight_dt = datetime.combine(query_date, dt_time.min, tzinfo=local_tz)
+
+        # Step 3: Convert that local midnight to UTC
+        utc_date = local_midnight_dt.astimezone(timezone.utc).date()
+
+        # Step 4: Use UTC date for the API call, but local date for storing results
+        api_date_str = utc_date.isoformat()  # used in Stormglass API call
+        date_str = local_date.isoformat()  # used in results['forecast']
+
+        #1. Shifting the date forward by one day to get sunrise/sunset for the intended local date.
+        #2. Converting that shifted local midnight to UTC.
+        #3. Passing the correct UTC date to Stormglass via api_date_str.
+
         astro_url = 'https://api.stormglass.io/v2/astronomy/point'
-        astro_params = {'lat': lat, 'lng': lng, 'date': date_str}
+        astro_params = {'lat': lat, 'lng': lng, 'date': api_date_str}
         logging.info(f"Calling Astronomy API: {astro_url} with params: {astro_params}")
         start_time = time.time()
 
-        astro_response = requests.get(
-            astro_url, headers=headers, params=astro_params)
+        astro_response = requests.get(astro_url, headers=headers, params=astro_params)
 
         duration = time.time() - start_time
         logging.info(f"Response time: {duration:.2f}s")
+        logging.info(f"Astronomy API status ({api_date_str}): {astro_response.status_code}")
 
-        logging.info(f"Astronomy API status ({date_str}): {astro_response.status_code}")
         if astro_response.status_code != 200:
             logging.error(f"Astronomy API failed: {astro_response.text}")
+            continue
 
         astro_data = astro_response.json()
         if 'data' in astro_data and len(astro_data['data']) > 0:
             astro = astro_data['data'][0]
+            logging.info(f"Astronomy raw data for {api_date_str}: {astro}")
             if astro.get('sunrise'):
                 results['forecast'][date_str]['sunrise'] = convert_to_local_time(
                     astro.get('sunrise'), lat, lng).strftime('%Y-%m-%d %H:%M %Z')

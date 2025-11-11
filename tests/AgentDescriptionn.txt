@@ -1,0 +1,12 @@
+
+Updated Agent Description
+
+Provides fishing-related environmental data using Franco's FishingConditionsAPI. The agent supports location-based queries and returns accurate, transformed data for:
+
+- Wind speed and direction (averaged over 24 hours, with cardinal conversion)
+- Tide times (high and low)
+- Swell height and direction
+- Sunrise and sunset (converted to local time)
+- Moon phase and moon metrics
+
+The agent uses only the FishingConditionsAPI as its source of truth and applies all necessary transform
