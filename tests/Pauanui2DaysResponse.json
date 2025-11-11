@@ -1,0 +1,1352 @@
+{
+  "coordinates": {
+    "lat": -37.0242711,
+    "lng": 175.8648118
+  },
+  "location": "Pauanui, Thames-Coromandel District, Waikato, 3579, New Zealand / Aotearoa",
+  "forecast": {
+    "2025-11-10": {
+      "summary": {
+        "tide": "2 high, 2 low",
+        "wind_peak_kmh": 36.18,
+        "swell_peak_m": 0.76,
+        "air_temp_max_c": 18.1,
+        "air_temp_min_c": 17.3,
+        "air_temp_avg_c": 17.8,
+        "water_temp_max_c": 17.4,
+        "water_temp_min_c": 16.9,
+        "water_temp_avg_c": 17.1,
+        "cloud_cover_avg_percent": 95.0,
+        "sunrise": "2025-11-09 06:04 NZDT",
+        "sunset": "2025-11-09 19:58 NZDT"
+      },
+      "high_tide": [
+        {
+          "time": "2025-11-10 11:20 NZDT",
+          "height": 2.03
+        },
+        {
+          "time": "2025-11-10 23:38 NZDT",
+          "height": 1.83
+        }
+      ],
+      "low_tide": [
+        {
+          "time": "2025-11-10 05:01 NZDT",
+          "height": -0.06
+        },
+        {
+          "time": "2025-11-10 17:37 NZDT",
+          "height": 0.11
+        }
+      ],
+      "sunrise": "2025-11-09 06:04 NZDT",
+      "sunset": "2025-11-09 19:58 NZDT",
+      "moon": {
+        "rise": "2025-11-10 00:29 NZDT",
+        "set": "2025-11-10 09:50 NZDT"
+      },
+      "moon_phase": {
+        "closest": {
+          "text": "Third quarter",
+          "time": "2025-11-12T12:56:00+00:00",
+          "value": 0.75
+        },
+        "current": {
+          "text": "Waning gibbous",
+          "time": "2025-11-09T00:00:00+00:00",
+          "value": 0.6301433869912316
+        }
+      },
+      "wind": [
+        {
+          "time": "2025-11-10 00:00 NZDT",
+          "speed_kmh": 11.09,
+          "direction_deg": 304.9
+        },
+        {
+          "time": "2025-11-10 01:00 NZDT",
+          "speed_kmh": 9.07,
+          "direction_deg": 297.51
+        },
+        {
+          "time": "2025-11-10 02:00 NZDT",
+          "speed_kmh": 7.27,
+          "direction_deg": 294.53
+        },
+        {
+          "time": "2025-11-10 03:00 NZDT",
+          "speed_kmh": 5.47,
+          "direction_deg": 291.56
+        },
+        {
+          "time": "2025-11-10 04:00 NZDT",
+          "speed_kmh": 3.67,
+          "direction_deg": 288.58
+        },
+        {
+          "time": "2025-11-10 05:00 NZDT",
+          "speed_kmh": 4.18,
+          "direction_deg": 307.63
+        },
+        {
+          "time": "2025-11-10 06:00 NZDT",
+          "speed_kmh": 4.72,
+          "direction_deg": 326.68
+        },
+        {
+          "time": "2025-11-10 07:00 NZDT",
+          "speed_kmh": 5.22,
+          "direction_deg": 345.73
+        },
+        {
+          "time": "2025-11-10 08:00 NZDT",
+          "speed_kmh": 8.86,
+          "direction_deg": 349.26
+        },
+        {
+          "time": "2025-11-10 09:00 NZDT",
+          "speed_kmh": 12.46,
+          "direction_deg": 352.78
+        },
+        {
+          "time": "2025-11-10 10:00 NZDT",
+          "speed_kmh": 16.09,
+          "direction_deg": 356.31
+        },
+        {
+          "time": "2025-11-10 11:00 NZDT",
+          "speed_kmh": 20.92,
+          "direction_deg": 356.11
+        },
+        {
+          "time": "2025-11-10 12:00 NZDT",
+          "speed_kmh": 25.7,
+          "direction_deg": 355.92
+        },
+        {
+          "time": "2025-11-10 13:00 NZDT",
+          "speed_kmh": 30.53,
+          "direction_deg": 355.72
+        },
+        {
+          "time": "2025-11-10 14:00 NZDT",
+          "speed_kmh": 32.4,
+          "direction_deg": 356.98
+        },
+        {
+          "time": "2025-11-10 15:00 NZDT",
+          "speed_kmh": 34.31,
+          "direction_deg": 358.24
+        },
+        {
+          "time": "2025-11-10 16:00 NZDT",
+          "speed_kmh": 36.18,
+          "direction_deg": 359.5
+        },
+        {
+          "time": "2025-11-10 17:00 NZDT",
+          "speed_kmh": 35.24,
+          "direction_deg": 356.61
+        },
+        {
+          "time": "2025-11-10 18:00 NZDT",
+          "speed_kmh": 34.34,
+          "direction_deg": 353.71
+        },
+        {
+          "time": "2025-11-10 19:00 NZDT",
+          "speed_kmh": 33.41,
+          "direction_deg": 350.82
+        },
+        {
+          "time": "2025-11-10 20:00 NZDT",
+          "speed_kmh": 31.36,
+          "direction_deg": 346.9
+        },
+        {
+          "time": "2025-11-10 21:00 NZDT",
+          "speed_kmh": 29.27,
+          "direction_deg": 342.99
+        },
+        {
+          "time": "2025-11-10 22:00 NZDT",
+          "speed_kmh": 27.22,
+          "direction_deg": 339.07
+        },
+        {
+          "time": "2025-11-10 23:00 NZDT",
+          "speed_kmh": 24.55,
+          "direction_deg": 333.84
+        }
+      ],
+      "swell_height": [
+        {
+          "time": "2025-11-10 00:00 NZDT",
+          "height_m": 0.75
+        },
+        {
+          "time": "2025-11-10 01:00 NZDT",
+          "height_m": 0.76
+        },
+        {
+          "time": "2025-11-10 02:00 NZDT",
+          "height_m": 0.76
+        },
+        {
+          "time": "2025-11-10 03:00 NZDT",
+          "height_m": 0.75
+        },
+        {
+          "time": "2025-11-10 04:00 NZDT",
+          "height_m": 0.75
+        },
+        {
+          "time": "2025-11-10 05:00 NZDT",
+          "height_m": 0.75
+        },
+        {
+          "time": "2025-11-10 06:00 NZDT",
+          "height_m": 0.74
+        },
+        {
+          "time": "2025-11-10 07:00 NZDT",
+          "height_m": 0.74
+        },
+        {
+          "time": "2025-11-10 08:00 NZDT",
+          "height_m": 0.74
+        },
+        {
+          "time": "2025-11-10 09:00 NZDT",
+          "height_m": 0.74
+        },
+        {
+          "time": "2025-11-10 10:00 NZDT",
+          "height_m": 0.74
+        },
+        {
+          "time": "2025-11-10 11:00 NZDT",
+          "height_m": 0.68
+        },
+        {
+          "time": "2025-11-10 12:00 NZDT",
+          "height_m": 0.61
+        },
+        {
+          "time": "2025-11-10 13:00 NZDT",
+          "height_m": 0.55
+        },
+        {
+          "time": "2025-11-10 14:00 NZDT",
+          "height_m": 0.54
+        },
+        {
+          "time": "2025-11-10 15:00 NZDT",
+          "height_m": 0.52
+        },
+        {
+          "time": "2025-11-10 16:00 NZDT",
+          "height_m": 0.51
+        },
+        {
+          "time": "2025-11-10 17:00 NZDT",
+          "height_m": 0.51
+        },
+        {
+          "time": "2025-11-10 18:00 NZDT",
+          "height_m": 0.5
+        },
+        {
+          "time": "2025-11-10 19:00 NZDT",
+          "height_m": 0.5
+        },
+        {
+          "time": "2025-11-10 20:00 NZDT",
+          "height_m": 0.49
+        },
+        {
+          "time": "2025-11-10 21:00 NZDT",
+          "height_m": 0.48
+        },
+        {
+          "time": "2025-11-10 22:00 NZDT",
+          "height_m": 0.47
+        },
+        {
+          "time": "2025-11-10 23:00 NZDT",
+          "height_m": 0.58
+        }
+      ],
+      "airTemperature": [
+        {
+          "time": "2025-11-10 00:00 NZDT",
+          "temperature_c": 17.9
+        },
+        {
+          "time": "2025-11-10 01:00 NZDT",
+          "temperature_c": 17.6
+        },
+        {
+          "time": "2025-11-10 02:00 NZDT",
+          "temperature_c": 17.5
+        },
+        {
+          "time": "2025-11-10 03:00 NZDT",
+          "temperature_c": 17.4
+        },
+        {
+          "time": "2025-11-10 04:00 NZDT",
+          "temperature_c": 17.3
+        },
+        {
+          "time": "2025-11-10 05:00 NZDT",
+          "temperature_c": 17.3
+        },
+        {
+          "time": "2025-11-10 06:00 NZDT",
+          "temperature_c": 17.3
+        },
+        {
+          "time": "2025-11-10 07:00 NZDT",
+          "temperature_c": 17.3
+        },
+        {
+          "time": "2025-11-10 08:00 NZDT",
+          "temperature_c": 17.4
+        },
+        {
+          "time": "2025-11-10 09:00 NZDT",
+          "temperature_c": 17.6
+        },
+        {
+          "time": "2025-11-10 10:00 NZDT",
+          "temperature_c": 17.8
+        },
+        {
+          "time": "2025-11-10 11:00 NZDT",
+          "temperature_c": 17.9
+        },
+        {
+          "time": "2025-11-10 12:00 NZDT",
+          "temperature_c": 18.0
+        },
+        {
+          "time": "2025-11-10 13:00 NZDT",
+          "temperature_c": 18.1
+        },
+        {
+          "time": "2025-11-10 14:00 NZDT",
+          "temperature_c": 18.1
+        },
+        {
+          "time": "2025-11-10 15:00 NZDT",
+          "temperature_c": 18.1
+        },
+        {
+          "time": "2025-11-10 16:00 NZDT",
+          "temperature_c": 18.1
+        },
+        {
+          "time": "2025-11-10 17:00 NZDT",
+          "temperature_c": 18.1
+        },
+        {
+          "time": "2025-11-10 18:00 NZDT",
+          "temperature_c": 18.1
+        },
+        {
+          "time": "2025-11-10 19:00 NZDT",
+          "temperature_c": 18.0
+        },
+        {
+          "time": "2025-11-10 20:00 NZDT",
+          "temperature_c": 18.0
+        },
+        {
+          "time": "2025-11-10 21:00 NZDT",
+          "temperature_c": 17.9
+        },
+        {
+          "time": "2025-11-10 22:00 NZDT",
+          "temperature_c": 17.8
+        },
+        {
+          "time": "2025-11-10 23:00 NZDT",
+          "temperature_c": 17.8
+        }
+      ],
+      "waterTemperature": [
+        {
+          "time": "2025-11-10 00:00 NZDT",
+          "temperature_c": 17.1
+        },
+        {
+          "time": "2025-11-10 01:00 NZDT",
+          "temperature_c": 16.9
+        },
+        {
+          "time": "2025-11-10 02:00 NZDT",
+          "temperature_c": 16.9
+        },
+        {
+          "time": "2025-11-10 03:00 NZDT",
+          "temperature_c": 16.9
+        },
+        {
+          "time": "2025-11-10 04:00 NZDT",
+          "temperature_c": 16.9
+        },
+        {
+          "time": "2025-11-10 05:00 NZDT",
+          "temperature_c": 16.9
+        },
+        {
+          "time": "2025-11-10 06:00 NZDT",
+          "temperature_c": 16.9
+        },
+        {
+          "time": "2025-11-10 07:00 NZDT",
+          "temperature_c": 16.9
+        },
+        {
+          "time": "2025-11-10 08:00 NZDT",
+          "temperature_c": 17.1
+        },
+        {
+          "time": "2025-11-10 09:00 NZDT",
+          "temperature_c": 17.2
+        },
+        {
+          "time": "2025-11-10 10:00 NZDT",
+          "temperature_c": 17.4
+        },
+        {
+          "time": "2025-11-10 11:00 NZDT",
+          "temperature_c": 17.4
+        },
+        {
+          "time": "2025-11-10 12:00 NZDT",
+          "temperature_c": 17.4
+        },
+        {
+          "time": "2025-11-10 13:00 NZDT",
+          "temperature_c": 17.4
+        },
+        {
+          "time": "2025-11-10 14:00 NZDT",
+          "temperature_c": 17.4
+        },
+        {
+          "time": "2025-11-10 15:00 NZDT",
+          "temperature_c": 17.4
+        },
+        {
+          "time": "2025-11-10 16:00 NZDT",
+          "temperature_c": 17.3
+        },
+        {
+          "time": "2025-11-10 17:00 NZDT",
+          "temperature_c": 17.3
+        },
+        {
+          "time": "2025-11-10 18:00 NZDT",
+          "temperature_c": 17.2
+        },
+        {
+          "time": "2025-11-10 19:00 NZDT",
+          "temperature_c": 17.1
+        },
+        {
+          "time": "2025-11-10 20:00 NZDT",
+          "temperature_c": 17.1
+        },
+        {
+          "time": "2025-11-10 21:00 NZDT",
+          "temperature_c": 17.1
+        },
+        {
+          "time": "2025-11-10 22:00 NZDT",
+          "temperature_c": 17.1
+        },
+        {
+          "time": "2025-11-10 23:00 NZDT",
+          "temperature_c": 17.1
+        }
+      ],
+      "precipitation": [
+        {
+          "time": "2025-11-10 00:00 NZDT",
+          "amount_mm": 0.07
+        },
+        {
+          "time": "2025-11-10 01:00 NZDT",
+          "amount_mm": 0.06
+        },
+        {
+          "time": "2025-11-10 02:00 NZDT",
+          "amount_mm": 0.04
+        },
+        {
+          "time": "2025-11-10 03:00 NZDT",
+          "amount_mm": 0.03
+        },
+        {
+          "time": "2025-11-10 04:00 NZDT",
+          "amount_mm": 0.01
+        },
+        {
+          "time": "2025-11-10 05:00 NZDT",
+          "amount_mm": 0.02
+        },
+        {
+          "time": "2025-11-10 06:00 NZDT",
+          "amount_mm": 0.02
+        },
+        {
+          "time": "2025-11-10 07:00 NZDT",
+          "amount_mm": 0.03
+        },
+        {
+          "time": "2025-11-10 08:00 NZDT",
+          "amount_mm": 0.04
+        },
+        {
+          "time": "2025-11-10 09:00 NZDT",
+          "amount_mm": 0.04
+        },
+        {
+          "time": "2025-11-10 10:00 NZDT",
+          "amount_mm": 0.04
+        },
+        {
+          "time": "2025-11-10 11:00 NZDT",
+          "amount_mm": 0.05
+        },
+        {
+          "time": "2025-11-10 12:00 NZDT",
+          "amount_mm": 0.06
+        },
+        {
+          "time": "2025-11-10 13:00 NZDT",
+          "amount_mm": 0.07
+        },
+        {
+          "time": "2025-11-10 14:00 NZDT",
+          "amount_mm": 0.06
+        },
+        {
+          "time": "2025-11-10 15:00 NZDT",
+          "amount_mm": 0.05
+        },
+        {
+          "time": "2025-11-10 16:00 NZDT",
+          "amount_mm": 0.05
+        },
+        {
+          "time": "2025-11-10 17:00 NZDT",
+          "amount_mm": 0.04
+        },
+        {
+          "time": "2025-11-10 18:00 NZDT",
+          "amount_mm": 0.04
+        },
+        {
+          "time": "2025-11-10 19:00 NZDT",
+          "amount_mm": 0.03
+        },
+        {
+          "time": "2025-11-10 20:00 NZDT",
+          "amount_mm": 0.1
+        },
+        {
+          "time": "2025-11-10 21:00 NZDT",
+          "amount_mm": 0.16
+        },
+        {
+          "time": "2025-11-10 22:00 NZDT",
+          "amount_mm": 0.23
+        },
+        {
+          "time": "2025-11-10 23:00 NZDT",
+          "amount_mm": 0.23
+        }
+      ],
+      "cloudCover": [
+        {
+          "time": "2025-11-10 00:00 NZDT",
+          "coverage_percent": 46.7
+        },
+        {
+          "time": "2025-11-10 01:00 NZDT",
+          "coverage_percent": 67.6
+        },
+        {
+          "time": "2025-11-10 02:00 NZDT",
+          "coverage_percent": 78.4
+        },
+        {
+          "time": "2025-11-10 03:00 NZDT",
+          "coverage_percent": 89.2
+        },
+        {
+          "time": "2025-11-10 04:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-10 05:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-10 06:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-10 07:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-10 08:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-10 09:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-10 10:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-10 11:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-10 12:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-10 13:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-10 14:00 NZDT",
+          "coverage_percent": 99.9
+        },
+        {
+          "time": "2025-11-10 15:00 NZDT",
+          "coverage_percent": 99.7
+        },
+        {
+          "time": "2025-11-10 16:00 NZDT",
+          "coverage_percent": 99.6
+        },
+        {
+          "time": "2025-11-10 17:00 NZDT",
+          "coverage_percent": 99.7
+        },
+        {
+          "time": "2025-11-10 18:00 NZDT",
+          "coverage_percent": 99.8
+        },
+        {
+          "time": "2025-11-10 19:00 NZDT",
+          "coverage_percent": 99.9
+        },
+        {
+          "time": "2025-11-10 20:00 NZDT",
+          "coverage_percent": 99.9
+        },
+        {
+          "time": "2025-11-10 21:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-10 22:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-10 23:00 NZDT",
+          "coverage_percent": 100.0
+        }
+      ]
+    },
+    "2025-11-11": {
+      "summary": {
+        "tide": "1 high, 2 low",
+        "wind_peak_kmh": 23.0,
+        "swell_peak_m": 0.81,
+        "air_temp_max_c": 18.7,
+        "air_temp_min_c": 17.5,
+        "air_temp_avg_c": 18.0,
+        "water_temp_max_c": 18.9,
+        "water_temp_min_c": 17.0,
+        "water_temp_avg_c": 17.4,
+        "cloud_cover_avg_percent": 97.3,
+        "sunrise": "2025-11-09 06:04 NZDT",
+        "sunset": "2025-11-09 19:58 NZDT"
+      },
+      "high_tide": [
+        {
+          "time": "2025-11-11 12:13 NZDT",
+          "height": 1.95
+        }
+      ],
+      "low_tide": [
+        {
+          "time": "2025-11-11 05:53 NZDT",
+          "height": 0.02
+        },
+        {
+          "time": "2025-11-11 18:32 NZDT",
+          "height": 0.17
+        }
+      ],
+      "sunrise": "2025-11-09 06:04 NZDT",
+      "sunset": "2025-11-09 19:58 NZDT",
+      "moon": {
+        "rise": "2025-11-10 00:29 NZDT",
+        "set": "2025-11-10 09:50 NZDT"
+      },
+      "moon_phase": {
+        "closest": {
+          "text": "Third quarter",
+          "time": "2025-11-12T12:56:00+00:00",
+          "value": 0.75
+        },
+        "current": {
+          "text": "Waning gibbous",
+          "time": "2025-11-09T00:00:00+00:00",
+          "value": 0.6301433869912316
+        }
+      },
+      "wind": [
+        {
+          "time": "2025-11-11 00:00 NZDT",
+          "speed_kmh": 21.89,
+          "direction_deg": 328.62
+        },
+        {
+          "time": "2025-11-11 01:00 NZDT",
+          "speed_kmh": 19.22,
+          "direction_deg": 323.39
+        },
+        {
+          "time": "2025-11-11 02:00 NZDT",
+          "speed_kmh": 16.34,
+          "direction_deg": 316.18
+        },
+        {
+          "time": "2025-11-11 03:00 NZDT",
+          "speed_kmh": 13.46,
+          "direction_deg": 308.98
+        },
+        {
+          "time": "2025-11-11 04:00 NZDT",
+          "speed_kmh": 10.58,
+          "direction_deg": 301.77
+        },
+        {
+          "time": "2025-11-11 05:00 NZDT",
+          "speed_kmh": 10.26,
+          "direction_deg": 290.72
+        },
+        {
+          "time": "2025-11-11 06:00 NZDT",
+          "speed_kmh": 9.94,
+          "direction_deg": 279.67
+        },
+        {
+          "time": "2025-11-11 07:00 NZDT",
+          "speed_kmh": 9.61,
+          "direction_deg": 268.62
+        },
+        {
+          "time": "2025-11-11 08:00 NZDT",
+          "speed_kmh": 8.82,
+          "direction_deg": 242.53
+        },
+        {
+          "time": "2025-11-11 09:00 NZDT",
+          "speed_kmh": 7.99,
+          "direction_deg": 216.44
+        },
+        {
+          "time": "2025-11-11 10:00 NZDT",
+          "speed_kmh": 7.2,
+          "direction_deg": 190.35
+        },
+        {
+          "time": "2025-11-11 11:00 NZDT",
+          "speed_kmh": 11.48,
+          "direction_deg": 136.91
+        },
+        {
+          "time": "2025-11-11 12:00 NZDT",
+          "speed_kmh": 15.8,
+          "direction_deg": 83.47
+        },
+        {
+          "time": "2025-11-11 13:00 NZDT",
+          "speed_kmh": 20.09,
+          "direction_deg": 30.03
+        },
+        {
+          "time": "2025-11-11 14:00 NZDT",
+          "speed_kmh": 21.06,
+          "direction_deg": 32.12
+        },
+        {
+          "time": "2025-11-11 15:00 NZDT",
+          "speed_kmh": 22.03,
+          "direction_deg": 34.22
+        },
+        {
+          "time": "2025-11-11 16:00 NZDT",
+          "speed_kmh": 23.0,
+          "direction_deg": 36.31
+        },
+        {
+          "time": "2025-11-11 17:00 NZDT",
+          "speed_kmh": 17.86,
+          "direction_deg": 4.46
+        },
+        {
+          "time": "2025-11-11 18:00 NZDT",
+          "speed_kmh": 12.74,
+          "direction_deg": 332.62
+        },
+        {
+          "time": "2025-11-11 19:00 NZDT",
+          "speed_kmh": 7.6,
+          "direction_deg": 300.77
+        },
+        {
+          "time": "2025-11-11 20:00 NZDT",
+          "speed_kmh": 8.17,
+          "direction_deg": 291.31
+        },
+        {
+          "time": "2025-11-11 21:00 NZDT",
+          "speed_kmh": 8.78,
+          "direction_deg": 281.84
+        },
+        {
+          "time": "2025-11-11 22:00 NZDT",
+          "speed_kmh": 9.36,
+          "direction_deg": 272.38
+        },
+        {
+          "time": "2025-11-11 23:00 NZDT",
+          "speed_kmh": 8.86,
+          "direction_deg": 299.55
+        }
+      ],
+      "swell_height": [
+        {
+          "time": "2025-11-11 00:00 NZDT",
+          "height_m": 0.7
+        },
+        {
+          "time": "2025-11-11 01:00 NZDT",
+          "height_m": 0.81
+        },
+        {
+          "time": "2025-11-11 02:00 NZDT",
+          "height_m": 0.77
+        },
+        {
+          "time": "2025-11-11 03:00 NZDT",
+          "height_m": 0.74
+        },
+        {
+          "time": "2025-11-11 04:00 NZDT",
+          "height_m": 0.7
+        },
+        {
+          "time": "2025-11-11 05:00 NZDT",
+          "height_m": 0.66
+        },
+        {
+          "time": "2025-11-11 06:00 NZDT",
+          "height_m": 0.62
+        },
+        {
+          "time": "2025-11-11 07:00 NZDT",
+          "height_m": 0.58
+        },
+        {
+          "time": "2025-11-11 08:00 NZDT",
+          "height_m": 0.55
+        },
+        {
+          "time": "2025-11-11 09:00 NZDT",
+          "height_m": 0.51
+        },
+        {
+          "time": "2025-11-11 10:00 NZDT",
+          "height_m": 0.48
+        },
+        {
+          "time": "2025-11-11 11:00 NZDT",
+          "height_m": 0.46
+        },
+        {
+          "time": "2025-11-11 12:00 NZDT",
+          "height_m": 0.44
+        },
+        {
+          "time": "2025-11-11 13:00 NZDT",
+          "height_m": 0.42
+        },
+        {
+          "time": "2025-11-11 14:00 NZDT",
+          "height_m": 0.45
+        },
+        {
+          "time": "2025-11-11 15:00 NZDT",
+          "height_m": 0.49
+        },
+        {
+          "time": "2025-11-11 16:00 NZDT",
+          "height_m": 0.52
+        },
+        {
+          "time": "2025-11-11 17:00 NZDT",
+          "height_m": 0.54
+        },
+        {
+          "time": "2025-11-11 18:00 NZDT",
+          "height_m": 0.57
+        },
+        {
+          "time": "2025-11-11 19:00 NZDT",
+          "height_m": 0.59
+        },
+        {
+          "time": "2025-11-11 20:00 NZDT",
+          "height_m": 0.58
+        },
+        {
+          "time": "2025-11-11 21:00 NZDT",
+          "height_m": 0.56
+        },
+        {
+          "time": "2025-11-11 22:00 NZDT",
+          "height_m": 0.55
+        },
+        {
+          "time": "2025-11-11 23:00 NZDT",
+          "height_m": 0.54
+        }
+      ],
+      "airTemperature": [
+        {
+          "time": "2025-11-11 00:00 NZDT",
+          "temperature_c": 17.7
+        },
+        {
+          "time": "2025-11-11 01:00 NZDT",
+          "temperature_c": 17.6
+        },
+        {
+          "time": "2025-11-11 02:00 NZDT",
+          "temperature_c": 17.6
+        },
+        {
+          "time": "2025-11-11 03:00 NZDT",
+          "temperature_c": 17.6
+        },
+        {
+          "time": "2025-11-11 04:00 NZDT",
+          "temperature_c": 17.5
+        },
+        {
+          "time": "2025-11-11 05:00 NZDT",
+          "temperature_c": 17.5
+        },
+        {
+          "time": "2025-11-11 06:00 NZDT",
+          "temperature_c": 17.5
+        },
+        {
+          "time": "2025-11-11 07:00 NZDT",
+          "temperature_c": 17.5
+        },
+        {
+          "time": "2025-11-11 08:00 NZDT",
+          "temperature_c": 17.6
+        },
+        {
+          "time": "2025-11-11 09:00 NZDT",
+          "temperature_c": 17.6
+        },
+        {
+          "time": "2025-11-11 10:00 NZDT",
+          "temperature_c": 17.7
+        },
+        {
+          "time": "2025-11-11 11:00 NZDT",
+          "temperature_c": 17.9
+        },
+        {
+          "time": "2025-11-11 12:00 NZDT",
+          "temperature_c": 18.2
+        },
+        {
+          "time": "2025-11-11 13:00 NZDT",
+          "temperature_c": 18.5
+        },
+        {
+          "time": "2025-11-11 14:00 NZDT",
+          "temperature_c": 18.4
+        },
+        {
+          "time": "2025-11-11 15:00 NZDT",
+          "temperature_c": 18.4
+        },
+        {
+          "time": "2025-11-11 16:00 NZDT",
+          "temperature_c": 18.3
+        },
+        {
+          "time": "2025-11-11 17:00 NZDT",
+          "temperature_c": 18.5
+        },
+        {
+          "time": "2025-11-11 18:00 NZDT",
+          "temperature_c": 18.6
+        },
+        {
+          "time": "2025-11-11 19:00 NZDT",
+          "temperature_c": 18.7
+        },
+        {
+          "time": "2025-11-11 20:00 NZDT",
+          "temperature_c": 18.5
+        },
+        {
+          "time": "2025-11-11 21:00 NZDT",
+          "temperature_c": 18.3
+        },
+        {
+          "time": "2025-11-11 22:00 NZDT",
+          "temperature_c": 18.1
+        },
+        {
+          "time": "2025-11-11 23:00 NZDT",
+          "temperature_c": 17.9
+        }
+      ],
+      "waterTemperature": [
+        {
+          "time": "2025-11-11 00:00 NZDT",
+          "temperature_c": 17.1
+        },
+        {
+          "time": "2025-11-11 01:00 NZDT",
+          "temperature_c": 17.1
+        },
+        {
+          "time": "2025-11-11 02:00 NZDT",
+          "temperature_c": 17.1
+        },
+        {
+          "time": "2025-11-11 03:00 NZDT",
+          "temperature_c": 17.1
+        },
+        {
+          "time": "2025-11-11 04:00 NZDT",
+          "temperature_c": 17.1
+        },
+        {
+          "time": "2025-11-11 05:00 NZDT",
+          "temperature_c": 17.1
+        },
+        {
+          "time": "2025-11-11 06:00 NZDT",
+          "temperature_c": 17.1
+        },
+        {
+          "time": "2025-11-11 07:00 NZDT",
+          "temperature_c": 17.1
+        },
+        {
+          "time": "2025-11-11 08:00 NZDT",
+          "temperature_c": 17.2
+        },
+        {
+          "time": "2025-11-11 09:00 NZDT",
+          "temperature_c": 17.4
+        },
+        {
+          "time": "2025-11-11 10:00 NZDT",
+          "temperature_c": 17.5
+        },
+        {
+          "time": "2025-11-11 11:00 NZDT",
+          "temperature_c": 18.0
+        },
+        {
+          "time": "2025-11-11 12:00 NZDT",
+          "temperature_c": 18.4
+        },
+        {
+          "time": "2025-11-11 13:00 NZDT",
+          "temperature_c": 18.9
+        },
+        {
+          "time": "2025-11-11 14:00 NZDT",
+          "temperature_c": 18.4
+        },
+        {
+          "time": "2025-11-11 15:00 NZDT",
+          "temperature_c": 18.0
+        },
+        {
+          "time": "2025-11-11 16:00 NZDT",
+          "temperature_c": 17.6
+        },
+        {
+          "time": "2025-11-11 17:00 NZDT",
+          "temperature_c": 17.4
+        },
+        {
+          "time": "2025-11-11 18:00 NZDT",
+          "temperature_c": 17.4
+        },
+        {
+          "time": "2025-11-11 19:00 NZDT",
+          "temperature_c": 17.2
+        },
+        {
+          "time": "2025-11-11 20:00 NZDT",
+          "temperature_c": 17.2
+        },
+        {
+          "time": "2025-11-11 21:00 NZDT",
+          "temperature_c": 17.1
+        },
+        {
+          "time": "2025-11-11 22:00 NZDT",
+          "temperature_c": 17.1
+        },
+        {
+          "time": "2025-11-11 23:00 NZDT",
+          "temperature_c": 17.0
+        }
+      ],
+      "precipitation": [
+        {
+          "time": "2025-11-11 00:00 NZDT",
+          "amount_mm": 0.24
+        },
+        {
+          "time": "2025-11-11 01:00 NZDT",
+          "amount_mm": 0.24
+        },
+        {
+          "time": "2025-11-11 02:00 NZDT",
+          "amount_mm": 0.18
+        },
+        {
+          "time": "2025-11-11 03:00 NZDT",
+          "amount_mm": 0.12
+        },
+        {
+          "time": "2025-11-11 04:00 NZDT",
+          "amount_mm": 0.06
+        },
+        {
+          "time": "2025-11-11 05:00 NZDT",
+          "amount_mm": 0.05
+        },
+        {
+          "time": "2025-11-11 06:00 NZDT",
+          "amount_mm": 0.05
+        },
+        {
+          "time": "2025-11-11 07:00 NZDT",
+          "amount_mm": 0.04
+        },
+        {
+          "time": "2025-11-11 08:00 NZDT",
+          "amount_mm": 0.03
+        },
+        {
+          "time": "2025-11-11 09:00 NZDT",
+          "amount_mm": 0.02
+        },
+        {
+          "time": "2025-11-11 10:00 NZDT",
+          "amount_mm": 0.0
+        },
+        {
+          "time": "2025-11-11 11:00 NZDT",
+          "amount_mm": 0.0
+        },
+        {
+          "time": "2025-11-11 12:00 NZDT",
+          "amount_mm": 0.0
+        },
+        {
+          "time": "2025-11-11 13:00 NZDT",
+          "amount_mm": 0.0
+        },
+        {
+          "time": "2025-11-11 14:00 NZDT",
+          "amount_mm": 0.0
+        },
+        {
+          "time": "2025-11-11 15:00 NZDT",
+          "amount_mm": 0.0
+        },
+        {
+          "time": "2025-11-11 16:00 NZDT",
+          "amount_mm": 0.0
+        },
+        {
+          "time": "2025-11-11 17:00 NZDT",
+          "amount_mm": 0.0
+        },
+        {
+          "time": "2025-11-11 18:00 NZDT",
+          "amount_mm": 0.0
+        },
+        {
+          "time": "2025-11-11 19:00 NZDT",
+          "amount_mm": 0.01
+        },
+        {
+          "time": "2025-11-11 20:00 NZDT",
+          "amount_mm": 0.0
+        },
+        {
+          "time": "2025-11-11 21:00 NZDT",
+          "amount_mm": 0.0
+        },
+        {
+          "time": "2025-11-11 22:00 NZDT",
+          "amount_mm": 0.0
+        },
+        {
+          "time": "2025-11-11 23:00 NZDT",
+          "amount_mm": 0.0
+        }
+      ],
+      "cloudCover": [
+        {
+          "time": "2025-11-11 00:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-11 01:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-11 02:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-11 03:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-11 04:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-11 05:00 NZDT",
+          "coverage_percent": 99.9
+        },
+        {
+          "time": "2025-11-11 06:00 NZDT",
+          "coverage_percent": 99.7
+        },
+        {
+          "time": "2025-11-11 07:00 NZDT",
+          "coverage_percent": 99.6
+        },
+        {
+          "time": "2025-11-11 08:00 NZDT",
+          "coverage_percent": 92.7
+        },
+        {
+          "time": "2025-11-11 09:00 NZDT",
+          "coverage_percent": 85.7
+        },
+        {
+          "time": "2025-11-11 10:00 NZDT",
+          "coverage_percent": 78.8
+        },
+        {
+          "time": "2025-11-11 11:00 NZDT",
+          "coverage_percent": 85.9
+        },
+        {
+          "time": "2025-11-11 12:00 NZDT",
+          "coverage_percent": 92.9
+        },
+        {
+          "time": "2025-11-11 13:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-11 14:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-11 15:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-11 16:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-11 17:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-11 18:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-11 19:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-11 20:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-11 21:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-11 22:00 NZDT",
+          "coverage_percent": 100.0
+        },
+        {
+          "time": "2025-11-11 23:00 NZDT",
+          "coverage_percent": 100.0
+        }
+      ]
+    }
+  },
+  "meta": {
+    "location": "https://www.google.com/maps?q=-37.0242711,175.8648118",
+    "timezone_name": "NZDT",
+    "timezone_offset": "UTC+13",
+    "requested_days": 2,
+    "data_source": "Stormglass",
+    "data_status": "complete"
+  },
+  "units": {
+    "height": "meters",
+    "speed": "km/h",
+    "temperature": "C",
+    "precipitation": "mm",
+    "direction": "degrees"
+  }
+}
